@@ -43,7 +43,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Panel">
-    <Position X="18.25" Y="7.25" Width="1.5" />
+    <Position X="17" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Panel.h</FileName>
@@ -82,6 +82,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACA=</HashCode>
       <FileName>RadioButton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Window">
+    <Position X="19.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Window.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
