@@ -5,11 +5,9 @@
 #include <iostream>
 #include "Graphix.h"
 #include "glut.h"
-
-#include "Window.h"
+#include "MyButton.h"
 #include "Label.h"
 #include "ImageBox.h"
-
 
 using namespace std;
 
@@ -21,17 +19,10 @@ int _tmain(int argc, char** argv)
     //This means after calling the InitOGL function no further lines of code in the main function are executed until we close the Window.
     //------------------------------------------------------------------------------------------------------------------------------------
 	//ControlBase* button = new MyButton(10,10,190,60);
-	//ControlBase* label = new MyButton(10, 10, 16, 16);
-  
-  Window* window = new Window();
-  ZControlBase* object = new Label("Fy fan va ful du är", 10, 10);
-  window->AddObject(object);
+	ControlBase* label = new Label("hej", 10, 10, 100, 0, 0);
+	InitOGL(argc, argv, label);
 
-  
-  ControlBase* mainWindow = window;
-  InitOGL(argc, argv, mainWindow);
-  
-  delete mainWindow;
+    delete label;
 	
 	return 0;
 }

@@ -17,7 +17,7 @@ public:
   void SetText(string text);
 	string GetText();
   void GetColor();
-  void SetColor(int red, int green, int blue);
+  void setColor(int red, int green, int blue);
 	void OnPaint();
 
 private:

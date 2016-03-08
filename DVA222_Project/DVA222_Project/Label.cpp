@@ -32,6 +32,7 @@ Label::Label(string text, int x, int y, int red, int green, int blue)
 	this->X = x;
 	this->Y = y;
 	color = new Color(red, green, blue);
+	SetColor(red, green, blue);
 }
 
 Label::~Label()
@@ -49,7 +50,7 @@ string Label::GetText()
 	return text;
 }
 
-void Label::SetColor(int red, int green, int blue)
+void Label::setColor(int red, int green, int blue)
 {
 	color->setColor(red, green, blue);
 }
