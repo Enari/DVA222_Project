@@ -21,7 +21,7 @@ void Selector::SetText()
 
 string Selector::GetText()
 {
-  return string();
+  return text->GetText();
 }
 
 void Selector::SetColor()
