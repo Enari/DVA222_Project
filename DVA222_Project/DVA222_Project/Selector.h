@@ -18,6 +18,8 @@ public:
   string GetText();
   void SetColor();
   Color GetColor();
+  bool isPressed();
+  void setStatus(bool pressed);
   virtual void OnMouseMove(int button, int x, int y);
   virtual void OnPaint();
   virtual void OnLoaded();
