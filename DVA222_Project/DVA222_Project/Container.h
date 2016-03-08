@@ -6,5 +6,7 @@ class Container :
 public:
   Container();
   ~Container();
+private:
+  int Z;
 };
 

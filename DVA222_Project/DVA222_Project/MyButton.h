@@ -16,7 +16,7 @@ public:
     Bitmap *press;
 
 	bool hit;
-    bool pressed;
+  bool pressed;
     
     MyButton();
     MyButton(int locX, int locY, int width, int height);

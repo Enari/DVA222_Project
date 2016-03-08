@@ -74,6 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Checkbox.h" />
     <ClInclude Include="CheckboxGroup.h" />
     <ClInclude Include="Container.h" />
@@ -92,6 +93,7 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Checkbox.cpp" />
     <ClCompile Include="CheckboxGroup.cpp" />
     <ClCompile Include="Container.cpp" />
