@@ -1,10 +1,16 @@
 #pragma once
-#include "Container.h"
+#include "Panel.h"
+#include "Color.h"
+#include <string>
+
 class Window :
-  public Container
+  public Panel
 {
 public:
   Window();
   ~Window();
+private:
+  string title;
+  Color bordercolor;
 };
 

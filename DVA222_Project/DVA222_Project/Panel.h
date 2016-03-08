@@ -6,5 +6,9 @@ class Panel :
 public:
   Panel();
   ~Panel();
+  Color GetBackgroudColor();
+  void SetBackgroundColor(Color newcolor);
+private:
+  Color backgroundColor;
 };
 

@@ -1,10 +1,20 @@
 #include "stdafx.h"
 #include "Container.h"
+#include <algorithm>
 
-
-Container::Container()
+using namespace std;
+Container::Container(int y, int x, int w, int h)
 {}
 
-
-Container::~Container()
+Container::Container(int y, int x, int w, int h, int z)
 {}
+
+void Container::onPaint()
+{
+  //Waiting for issue: DVA222P-15
+  //sort(objects.begin(), objects.end());
+  for each (ZControlBase object in objects)
+  { 
+    object.OnPaint();
+  }
+}
