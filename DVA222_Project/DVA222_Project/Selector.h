@@ -1,6 +1,6 @@
 #pragma once
 #include "StdAfx.h"
-#include "ControlBase.h"
+#include "ZControlBase.h"
 #include "Label.h"
 #include "Graphix.h"
 #include "glut.h"
@@ -8,7 +8,7 @@
 #include "Color.h"
 
 class Selector :
-  public ControlBase
+  public ZControlBase
 {
 public:
   Selector();

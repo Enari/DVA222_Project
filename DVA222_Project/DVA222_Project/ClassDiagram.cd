@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="ControlBase">
-    <Position X="7.5" Y="0.5" Width="3.5" />
+    <Position X="0.5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAABAAAAAAAQAAAAEABABAAAAAAIAAAABACYCA=</HashCode>
       <FileName>ControlBase.h</FileName>
@@ -10,7 +10,7 @@
   <Class Name="Selector">
     <Position X="3" Y="5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AIQAAAAAAAAAAAAIAIAAAAiAAAAAAACIAAgAAAAAAAA=</HashCode>
+      <HashCode>AISAAAAAAIAAAgAIQIAAAAiAABABAECIIAgACAACAAA=</HashCode>
       <FileName>Selector.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,14 +24,14 @@
   <Class Name="ImageBox">
     <Position X="8.25" Y="5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AACIAAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AACIAAAAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ImageBox.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Container">
-    <Position X="15.5" Y="5" Width="1.75" />
+    <Position X="15.5" Y="5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAAAAAQAgAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Container.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -64,14 +64,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Checkbox">
-    <Position X="2.25" Y="9" Width="1.75" />
+    <Position X="2" Y="10.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Checkbox.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RadioButton">
-    <Position X="4.25" Y="9" Width="1.75" />
+    <Position X="4.5" Y="10.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACA=</HashCode>
       <FileName>RadioButton.h</FileName>
@@ -92,7 +92,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Color">
-    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Position X="17" Y="0.5" Width="2.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -106,6 +106,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAIAQABgAAIAAA=</HashCode>
       <FileName>Color.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZControlBase">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABE=</HashCode>
+      <FileName>ZControlBase.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

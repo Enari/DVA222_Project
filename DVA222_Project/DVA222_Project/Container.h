@@ -1,16 +1,16 @@
 #pragma once
-#include "ControlBase.h"
+#include "ZControlBase.h"
 #include <vector>
 
 class Container :
-  public ControlBase
+  public ZControlBase
 {
 public:
   Container(int y, int x, int w, int h);
   Container(int y, int x, int w, int h, int z);
+  void onPaint();
   ~Container();
 private:
-  vector<ControlBase>* objects;
-  int Z;
+  vector<ControlBase> objects;
 };
 

@@ -1,11 +1,11 @@
 #pragma once
 #include "stdafx.h"
-#include "ControlBase.h"
+#include "ZControlBase.h"
 #include <string>
 #include "Color.h"
 
 class Label:
-  public ControlBase
+  public ZControlBase
 {
 public:
 	Label();

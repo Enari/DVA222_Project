@@ -5,11 +5,11 @@ They should support interactions with the mouse such as hovering.
 Size, position, text, and other properties of the button should be changeable through get/set functions.
 */
 #pragma once
-#include "ControlBase.h"
+#include "ZControlBase.h"
 #include "Label.h"
 
 class Button :
-  public ControlBase
+  public ZControlBase
 {
 public:
   Button(Label label);

@@ -1,8 +1,8 @@
 #pragma once
-#include "ControlBase.h"
+#include "ZControlBase.h"
 #include "Graphix.h"
 
-class ImageBox : public ControlBase
+class ImageBox : public ZControlBase
 {
 private:
 	string filepath;
