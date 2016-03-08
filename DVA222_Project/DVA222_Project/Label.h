@@ -2,11 +2,13 @@
 #include "stdafx.h"
 #include "ControlBase.h"
 #include <string>
+#include "Color.h"
 
 class Label:
   public ControlBase
 {
 public:
+	Label();
 	Label(const Label& other);
   Label(string text);
 	Label(string text, int x, int y);
@@ -21,6 +23,6 @@ public:
 private:
 	string text;
   //Typ? skapa en struct för color?
-  int red, green, blue;
+	Color color;
 };
 

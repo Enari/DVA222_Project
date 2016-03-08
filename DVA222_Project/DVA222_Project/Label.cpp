@@ -2,14 +2,18 @@
 #include "Label.h"
 #include "Graphix.h"
 
+Label::Label()
+{
+	Label("");
+}
+
 Label::Label(const Label & other)
 {
 	this->text = other.text;
 	this->X = other.X;
 	this->Y = other.Y;
-	this->red = other.red;
-	this->green = other.green;
-	this->blue = other.blue;
+	//this->color.setColor(other.color.getColor().r, other.color.getColor().g, other.color.getColor().b);
+	this->color = other.color;
 }
 
 Label::Label(string text)
@@ -27,9 +31,7 @@ Label::Label(string text, int x, int y, int red, int green, int blue)
 	this->text = text;
 	this->X = x;
 	this->Y = y;
-	this->red = red;
-	this->green = green;
-	this->blue = blue;
+	color.setColor(red, green, blue);
 }
 
 Label::~Label()
@@ -49,13 +51,11 @@ string Label::GetText()
 
 void Label::SetColor(int red, int green, int blue)
 {
-	this->red = red;
-	this->green = green;
-	this->blue = blue;
+	color.setColor(red, green, blue);
 }
 
 void Label::OnPaint()
 {
-	SetColor(red, green, blue);
+	SetColor(color.getColor().r, color.getColor().g, color.getColor().b);
 	DrawString(text, X, Y);
 }
