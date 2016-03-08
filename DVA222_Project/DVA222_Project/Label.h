@@ -23,6 +23,6 @@ public:
 private:
 	string text;
   //Typ? skapa en struct för color?
-	Color color;
+	Color* color;
 };
 

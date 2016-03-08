@@ -13,7 +13,7 @@ Label::Label(const Label & other)
 	this->X = other.X;
 	this->Y = other.Y;
 	//this->color.setColor(other.color.getColor().r, other.color.getColor().g, other.color.getColor().b);
-	this->color = other.color;
+	this->color = new Color(*other.color);
 }
 
 Label::Label(string text)
@@ -31,7 +31,7 @@ Label::Label(string text, int x, int y, int red, int green, int blue)
 	this->text = text;
 	this->X = x;
 	this->Y = y;
-	color.setColor(red, green, blue);
+	color->setColor(red, green, blue);
 }
 
 Label::~Label()
@@ -51,11 +51,11 @@ string Label::GetText()
 
 void Label::SetColor(int red, int green, int blue)
 {
-	color.setColor(red, green, blue);
+	color->setColor(red, green, blue);
 }
 
 void Label::OnPaint()
 {
-	SetColor(color.getColor().r, color.getColor().g, color.getColor().b);
+	SetColor(color->getColor().r, color->getColor().g, color->getColor().b);
 	DrawString(text, X, Y);
 }
