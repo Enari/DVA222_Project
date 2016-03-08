@@ -17,6 +17,9 @@ Color::Color(const Color & other)
 
 void Color::setColor(int r, int g, int b)
 {
+	this->r = r;
+	this->g = g;
+	this->b = b;
 }
 
 Color::Values Color::getColor()

@@ -31,7 +31,7 @@ Label::Label(string text, int x, int y, int red, int green, int blue)
 	this->text = text;
 	this->X = x;
 	this->Y = y;
-	color->setColor(red, green, blue);
+	color = new Color(red, green, blue);
 }
 
 Label::~Label()
@@ -57,5 +57,6 @@ void Label::SetColor(int red, int green, int blue)
 void Label::OnPaint()
 {
 	SetColor(color->getColor().r, color->getColor().g, color->getColor().b);
+	//SetColor(color->getColor().r, color->getColor().g, color->getColor().b);
 	DrawString(text, X, Y);
 }
