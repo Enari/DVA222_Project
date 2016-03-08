@@ -1,6 +1,11 @@
 #pragma once
 #include "ControlBase.h"
 #include "Label.h"
+#include "StdAfx.h"
+#include "Graphix.h"
+#include "glut.h"
+#include "string"
+#include "Color.h"
 
 class Selector :
   public ControlBase
@@ -9,13 +14,13 @@ public:
   Selector(Label label);
   ~Selector();
   void SetText();
-  char* GetText();
+  string GetText();
   void SetColor();
-  int GetColor();
+  Color GetColor();
 private:
+	Bitmap *normal;
   Label* text;
-  int color;
+  Color* color;
   bool status;
-
 };
 

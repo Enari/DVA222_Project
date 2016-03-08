@@ -11,6 +11,7 @@ private:
 public:
 	Color(int r, int g, int b);
 	Color();
+	Color(const Color& other);
 	~Color();
 	void setColor(int r, int g, int b);
 	Values getColor();
