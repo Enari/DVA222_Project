@@ -1,6 +1,14 @@
 #include "stdafx.h"
 #include "Color.h"
 
+
+Color::Color()
+{
+  r = 255;
+  g = 255;
+  b = 255;
+}
+
 Color::Color(int red, int green, int blue)
 {
 	r = red;
@@ -14,6 +22,9 @@ Color::Color(const Color & other)
 	this->g = other.g;
 	this->b = other.b;
 }
+
+Color::~Color()
+{}
 
 void Color::setColor(int r, int g, int b)
 {
