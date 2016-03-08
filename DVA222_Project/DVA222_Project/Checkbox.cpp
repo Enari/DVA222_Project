@@ -2,8 +2,9 @@
 #include "Checkbox.h"
 
 
-Checkbox::Checkbox()
-{}
+Checkbox::Checkbox(Label label) : Selector (label)
+{
+}
 
 
 Checkbox::~Checkbox()

@@ -6,14 +6,14 @@ class Selector :
   public ControlBase
 {
 public:
-  Selector();
+  Selector(Label label);
   ~Selector();
   void SetText();
   char* GetText();
   void SetColor();
   int GetColor();
 private:
-  Label text;
+  Label* text;
   int color;
   bool status;
 
