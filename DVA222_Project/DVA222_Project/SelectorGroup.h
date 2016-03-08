@@ -6,10 +6,10 @@ class SelectorGroup :
   public ControlBase
 {
 public:
-  SelectorGroup();
+  SelectorGroup(Label label);
   ~SelectorGroup();
 private:
-  Label title;
+  Label* title;
   //Boarder????? Acecceble via set/get functions
 };
 

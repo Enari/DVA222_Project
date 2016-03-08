@@ -5,7 +5,7 @@ class CheckboxGroup :
   public SelectorGroup
 {
 public:
-  CheckboxGroup();
+  CheckboxGroup(Label label);
   ~CheckboxGroup();
 };
 

@@ -2,8 +2,10 @@
 #include "SelectorGroup.h"
 
 
-SelectorGroup::SelectorGroup()
-{}
+SelectorGroup::SelectorGroup(Label label)
+{
+	title = new Label(label);
+}
 
 
 SelectorGroup::~SelectorGroup()

@@ -4,7 +4,7 @@ class RadioButtonGroup :
   public SelectorGroup
 {
 public:
-  RadioButtonGroup();
+  RadioButtonGroup(Label label);
   ~RadioButtonGroup();
 };
 
