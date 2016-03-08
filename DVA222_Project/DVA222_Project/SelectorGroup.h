@@ -1,9 +1,9 @@
 #pragma once
-#include "ControlBase.h"
+#include "Container.h"
 #include "Label.h"
 
 class SelectorGroup :
-  public ControlBase
+  public Container
 {
 public:
   SelectorGroup(Label label);
