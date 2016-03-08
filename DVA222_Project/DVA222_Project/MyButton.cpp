@@ -55,9 +55,9 @@ void MyButton::OnLoaded()
 	//Only 24bit bmp files are supported
 	//Edit your bitmaps in MSPaint also remember that the width of the image MUST be a factor of 4 (be dividable by 4)
 
-	normal = new Bitmap("ButtonNorm.bmp");		
-    hover  = new Bitmap("ButtonHover.bmp");		
-    press = new Bitmap("ButtonPressed.bmp");		
+	normal = new Bitmap("RadioNorm.bmp");		
+    hover  = new Bitmap("RadioHover.bmp");		
+    press = new Bitmap("RadioChecked.bmp");		
 		
 }	
 

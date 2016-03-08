@@ -19,7 +19,7 @@ int _tmain(int argc, char** argv)
     //This means after calling the InitOGL function no further lines of code in the main function are executed until we close the Window.
     //------------------------------------------------------------------------------------------------------------------------------------
 	//ControlBase* button = new MyButton(10,10,190,60);
-	ControlBase* label = new ImageBox("ButtonHover.bmp", 10, 10);
+	ControlBase* label = new MyButton(10, 10, 16, 16);
 	InitOGL(argc, argv, label);
 
     delete label;
