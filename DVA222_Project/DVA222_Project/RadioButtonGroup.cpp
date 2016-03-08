@@ -2,7 +2,7 @@
 #include "RadioButtonGroup.h"
 
 
-RadioButtonGroup::RadioButtonGroup()
+RadioButtonGroup::RadioButtonGroup(Label label) : SelectorGroup(label)
 {}
 
 

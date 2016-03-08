@@ -2,8 +2,10 @@
 #include "Selector.h"
 
 
-Selector::Selector()
-{}
+Selector::Selector(Label label)
+{
+	text = new Label(label);
+}
 
 
 Selector::~Selector()

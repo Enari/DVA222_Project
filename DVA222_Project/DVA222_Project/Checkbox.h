@@ -4,7 +4,8 @@ class Checkbox :
   public Selector
 {
 public:
-  Checkbox();
+  Checkbox(Label label);
   ~Checkbox();
+private:
 };
 

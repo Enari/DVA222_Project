@@ -2,7 +2,7 @@
 #include "CheckboxGroup.h"
 
 
-CheckboxGroup::CheckboxGroup()
+CheckboxGroup::CheckboxGroup(Label label) : SelectorGroup(label)
 {}
 
 

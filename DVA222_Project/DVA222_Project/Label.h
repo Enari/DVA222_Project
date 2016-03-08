@@ -1,19 +1,28 @@
 #pragma once
+#include "stdafx.h"
 #include "ControlBase.h"
+#include <string>
+#include "Color.h"
 
 class Label:
   public ControlBase
 {
 public:
-  Label();
+	Label();
+	Label(const Label& other);
+  Label(string text);
+	Label(string text, int x, int y);
+	Label(string text, int x, int y, int red, int green, int blue);
   ~Label();
-  void SetLabel();
-  char* GetLabel();
+  void SetText(string text);
+	string GetText();
   void GetColor();
-  int SetColor();
+  void SetColor(int red, int green, int blue);
+	void OnPaint();
+
 private:
-  char *text;
+	string text;
   //Typ? skapa en struct för color?
-  int color;
+	Color* color;
 };
 
