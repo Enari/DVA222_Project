@@ -3,7 +3,7 @@
 
 
 Window::Window()
-  :Container(0, 0, 800, 600)
+  :Panel(0, 0, 800, 600)
 {}
 
 

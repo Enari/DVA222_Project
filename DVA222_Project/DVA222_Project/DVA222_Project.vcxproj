@@ -123,9 +123,6 @@
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="DVA222_Project.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

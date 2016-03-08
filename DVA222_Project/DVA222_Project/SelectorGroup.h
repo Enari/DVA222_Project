@@ -1,12 +1,11 @@
 #pragma once
 #include "Container.h"
-#include "Label.h"
 
 class SelectorGroup :
   public Container
 {
 public:
-  SelectorGroup(Label label);
+  SelectorGroup(int x, int y, int w, int h, Label label);
   ~SelectorGroup();
 private:
   Label* title;

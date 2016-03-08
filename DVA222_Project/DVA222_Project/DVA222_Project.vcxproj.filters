@@ -138,9 +138,4 @@
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="DVA222_Project.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
 </Project>

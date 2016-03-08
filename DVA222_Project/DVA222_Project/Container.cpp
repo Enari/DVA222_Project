@@ -9,6 +9,9 @@ Container::Container(int y, int x, int w, int h)
 Container::Container(int y, int x, int w, int h, int z)
 {}
 
+Container::~Container()
+{}
+
 void Container::onPaint()
 {
   //Waiting for issue: DVA222P-15

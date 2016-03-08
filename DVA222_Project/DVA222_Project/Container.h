@@ -1,6 +1,8 @@
 #pragma once
 #include "ZControlBase.h"
 #include <vector>
+#include "Label.h"
+#include "Color.h"
 
 class Container :
   public ZControlBase
