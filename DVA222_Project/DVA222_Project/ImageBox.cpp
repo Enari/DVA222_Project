@@ -40,13 +40,9 @@ ImageBox::~ImageBox()
 void ImageBox::OnPaint()
 {
 	if (Width == 0 && Height == 0)
-	{
 		DrawBitmap(*image, X, Y);
-	}
 	else
-	{
 		DrawBitmap(*image, X, Y, Width, Height);
-	}
 }
 
 void ImageBox::OnLoaded()
