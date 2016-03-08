@@ -11,11 +11,15 @@ Size, position, text, and other properties of the button should be changeable th
 class Button :
   public ZControlBase
 {
+private:
+	Label* text;
 public:
   Button(Label label);
   ~Button();
-private:
-  Label* text;
-
+  void onPaint();
+  void onLoaded();  
+  void OnMouseMove(int button, int x, int y);
+  void OnMouseDown(int button, int x, int y);
+  void OnMouseUp(int button, int x, int y);
 };
 
