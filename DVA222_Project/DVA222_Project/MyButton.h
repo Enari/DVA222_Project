@@ -9,14 +9,14 @@ class MyButton : public ControlBase
 public:
     //Bitmap objects that hold different images for different states of the Button
     //Remember that the images MUST be in 24bit BMP format (use paint if you have images in other format)
-    //Also remember that the image with MUST be dividable by 4
+    //Also remember that the image witdh MUST be dividable by 4
     //Also remember that the images must be stored in the same location as your source files
 	Bitmap *normal;
 	Bitmap *hover;
     Bitmap *press;
 
 	bool hit;
-  bool pressed;
+    bool pressed;
     
     MyButton();
     MyButton(int locX, int locY, int width, int height);

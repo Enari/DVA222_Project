@@ -8,6 +8,13 @@ Color::Color(int red, int green, int blue)
 	b = blue;
 }
 
+Color::Color(const Color & other)
+{
+	this->r = other.r;
+	this->g = other.g;
+	this->b = other.b;
+}
+
 void Color::setColor(int r, int g, int b)
 {
 }
