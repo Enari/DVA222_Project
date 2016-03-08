@@ -11,7 +11,8 @@ public:
   Container(int y, int x, int w, int h);
   Container(int y, int x, int w, int h, int z);
   ~Container();
-  void onPaint();
+  void OnPaint(); //sort the objects in Z order and calls their OnPrint()
+  void OnLoaded(); //Updates the objects relative Position
   void addObject();
 private:
   vector<ZControlBase> objects;
