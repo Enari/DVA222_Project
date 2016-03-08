@@ -7,6 +7,7 @@
 #include "glut.h"
 #include "MyButton.h"
 #include "Label.h"
+#include "ImageBox.h"
 
 using namespace std;
 
@@ -18,10 +19,10 @@ int _tmain(int argc, char** argv)
     //This means after calling the InitOGL function no further lines of code in the main function are executed until we close the Window.
     //------------------------------------------------------------------------------------------------------------------------------------
 	//ControlBase* button = new MyButton(10,10,190,60);
-	ControlBase* label = new Label("Hej", 10, 10, 0, 0, 0);
+	ControlBase* label = new ImageBox("ButtonHover.bmp", 10, 10);
 	InitOGL(argc, argv, label);
 
-  delete label;
+    delete label;
 	
 	return 0;
 }

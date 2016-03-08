@@ -5,13 +5,15 @@
 class ImageBox : public ControlBase
 {
 private:
-	Bitmap *image;
 	string filepath;
+	Bitmap *image;
 public:
   ImageBox();
-  ImageBox(string, float x, float y, float width, float height);
+  ImageBox(const ImageBox &other);
+  ImageBox(string filePath, float posX, float posY);
+  ImageBox(string filePath, float posX, float posY, int width, int height);
   ~ImageBox();
-  void OnPaint();
-  void OnLoad();
+  virtual void OnPaint();
+  virtual void OnLoaded();
 };
 
