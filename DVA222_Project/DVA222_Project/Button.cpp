@@ -2,9 +2,10 @@
 #include "Button.h"
 
 
-Button::Button()
-{}
-
+Button::Button(Label label)
+{
+	text = new Label(label);
+}
 
 Button::~Button()
 {}

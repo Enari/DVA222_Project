@@ -6,6 +6,7 @@
 #include "Graphix.h"
 #include "glut.h"
 #include "MyButton.h"
+#include "Label.h"
 
 using namespace std;
 
@@ -16,10 +17,12 @@ int _tmain(int argc, char** argv)
     //From that point the control is handed over to the OpenGL window and stays there until the user closes the Window.
     //This means after calling the InitOGL function no further lines of code in the main function are executed until we close the Window.
     //------------------------------------------------------------------------------------------------------------------------------------
-    ControlBase* button = new MyButton(10,10,190,60);
-	InitOGL(argc, argv, button);
+	//ControlBase* button = new MyButton(10,10,190,60);
+	ControlBase* label = new Label("Hej", 10, 10, 0, 0, 0);
+	InitOGL(argc, argv, label);
 
-    delete button;
+  delete label;
+	
 	return 0;
 }
 

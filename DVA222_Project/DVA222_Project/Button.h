@@ -12,10 +12,10 @@ class Button :
   public ControlBase
 {
 public:
-  Button();
+  Button(Label label);
   ~Button();
 private:
-  Label text;
+  Label* text;
 
 };
 
