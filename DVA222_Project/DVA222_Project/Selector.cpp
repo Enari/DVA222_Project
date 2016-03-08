@@ -28,10 +28,10 @@ void Selector::SetColor()
 {
 }
 
-Color Selector::GetColor()
-{
-  return Color();
-}
+//Color Selector::GetColor()
+//{
+//  return Color();
+//}
 
 void Selector::OnMouseMove(int button, int x, int y)
 {

@@ -1,7 +1,7 @@
 #pragma once
+#include "StdAfx.h"
 #include "ControlBase.h"
 #include "Label.h"
-#include "StdAfx.h"
 #include "Graphix.h"
 #include "glut.h"
 #include "string"
@@ -30,6 +30,6 @@ private:
   Label* text;
   Color* color;
   bool hit;
-  bool checked;
+  bool pressed;
 };
 
