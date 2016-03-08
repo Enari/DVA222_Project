@@ -4,7 +4,7 @@ class RadioButton :
   public Selector
 {
 public:
-  RadioButton();
+  RadioButton(Label label);
   ~RadioButton();
 };
 

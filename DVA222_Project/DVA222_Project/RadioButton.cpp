@@ -2,7 +2,7 @@
 #include "RadioButton.h"
 
 
-RadioButton::RadioButton()
+RadioButton::RadioButton(Label label) : Selector (label)
 {}
 
 
