@@ -10,8 +10,8 @@ private:
 public:
   ImageBox();
   ImageBox(const ImageBox &other);
-  ImageBox(string filePath, float posX, float posY);
-  ImageBox(string filePath, float posX, float posY, int width, int height);
+  ImageBox(string filePath, int posX, int posY);
+  ImageBox(string filePath, int posX, int posY, int width, int height);
   ~ImageBox();
   virtual void OnPaint();
   virtual void OnLoaded();
