@@ -26,19 +26,36 @@ Container::Container(const Container & other) : ZControlBase(other)
 Container::~Container()
 {}
 
+void Container::OnLoaded()
+{
+  for each (auto& object in objects)
+  {
+    object->OnLoaded();
+  }
+}
+
 void Container::OnPaint()
 {
   //Waiting for issue: DVA222P-15
   sort(objects.begin(), objects.end());
 
   //Call All objects OnPaint
-  for each (ZControlBase object in objects)
+  //auto& == super leet haxx
+  for each (auto& object in objects)
   { 
-    object.OnPaint();
+    object->OnPaint();
   }
 }
 
-void Container::AddObject(ZControlBase &object)
+void Container::OnMouseMove(int button, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnMouseMove(button, x, y);
+  }
+}
+
+void Container::AddObject(ZControlBase* object)
 {
   ////If object is inside Container Set absolute position form relative position
   //if(object.GetX() < Width && object.GetY() < Height)
@@ -48,8 +65,8 @@ void Container::AddObject(ZControlBase &object)
   //}
 
   //Change position to relative
-  object.SetX(object.GetX() + X);
-  object.SetY(object.GetY() + Y);
+  object->SetX(object->GetX() + X);
+  object->SetY(object->GetY() + Y);
 
   //Add object to the vector
   objects.push_back(object);
