@@ -55,6 +55,38 @@ void Container::OnMouseMove(int button, int x, int y)
   }
 }
 
+void Container::OnKeyboard(unsigned char key, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnKeyboard(key, x, y);
+  }
+}
+
+void Container::OnMouseDown(int button, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnMouseDown(button, x, y);
+  }
+}
+
+void Container::OnMouseUp(int button, int x, int y) 
+{
+  for each (auto& object in objects)
+  {
+    object->OnMouseUp(button, x, y);
+  }
+}
+
+void Container::OnResize(int width, int height)
+{
+  for each (auto& object in objects)
+  {
+    object->OnResize(width, height);
+  }
+}
+
 void Container::AddObject(ZControlBase* object)
 {
   ////If object is inside Container Set absolute position form relative position
