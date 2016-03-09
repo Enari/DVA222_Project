@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "Checkbox.h"
 
-
-
 Checkbox::Checkbox()
   : Checkbox("")
 {}
@@ -38,22 +36,4 @@ void Checkbox::OnLoaded()
   hover->OnLoaded();
   checked = new ImageBox("checkChecked.bmp", X, Y);
   checked->OnLoaded();
-}
-
-void Checkbox::OnPaint()
-{
-  if(pressed == true)
-  {
-    checked->OnPaint();
-  }
-  else if(hit == true)
-  {
-    hover->OnPaint();
-  }
-  else
-  {
-    normal->OnPaint();
-  }
-
-  Selector::OnPaint();
 }

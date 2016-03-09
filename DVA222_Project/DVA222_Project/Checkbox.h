@@ -13,7 +13,5 @@ public:
   Checkbox(const Checkbox& other);
   ~Checkbox();
   void OnLoaded();
-  void OnPaint();
-private:
 };
 

@@ -82,6 +82,18 @@ void Selector::SetStatus(bool newStatus)
 //Done
 void Selector::OnPaint()
 {
+  if(pressed == true)
+  {
+    checked->OnPaint();
+  }
+  else if(hit == true)
+  {
+    hover->OnPaint();
+  }
+  else
+  {
+    normal->OnPaint();
+  }
   text->OnPaint();
 }
 
