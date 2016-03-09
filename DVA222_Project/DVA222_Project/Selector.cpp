@@ -19,9 +19,8 @@ Selector::Selector(string text, int x, int y)
 {}
 
 Selector::Selector(string text, Color& color, int x, int y)
+  : ZControlBase(x, y)
 {
-  X = x;
-  Y = y;
   hit = pressed = false;
   this->text = new Label(text, (x + 18), (y+13), color.GetColor().r, color.GetColor().g, color.GetColor().b);
 }
@@ -60,7 +59,7 @@ void Selector::SetTextColor(Color& newColor)
   this->text->SetTextColor(newColor.GetColor().r, newColor.GetColor().g, newColor.GetColor().b);
 }
 
-//NOPE FIX ME PLEASE!
+//Waiting for label to implement GetTextColor();
 Color Selector::GetTextColor()
 {
   //return text->GetTextColor();
