@@ -11,26 +11,34 @@ class Selector :
   public ZControlBase
 {
 public:
+  //Constructors, all working.
   Selector();
-  Selector(Label label);
+  Selector(string text);
+  Selector(string text, int x, int y);
+  Selector(string text, int x, int y, Color& color);
+  Selector(Selector& other);
   ~Selector();
+
   void SetText();
   string GetText();
-  void SetColor();
+  
+  void SetColor(Color& newColor);
   Color GetColor();
+  
   bool IsPressed();
   void setStatus(bool pressed);
+  
   virtual void OnMouseMove(int button, int x, int y);
   virtual void OnPaint();
   virtual void OnLoaded();
   void OnMouseDown(int button, int x, int y);
   void OnMouseUp(int button, int x, int y);
-private:
+protected:
   Bitmap* normal;
   Bitmap* hover;
   Bitmap* checked;
   Label* text;
-  Color* textcolor;
+private:
   bool hit;
   bool pressed;
 };

@@ -9,3 +9,10 @@
 //
 //Checkbox::~Checkbox()
 //{}
+
+Checkbox::~Checkbox()
+{
+  delete normal;
+  delete hover;
+  delete checked;
+}

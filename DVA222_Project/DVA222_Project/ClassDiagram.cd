@@ -1,117 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="ControlBase">
-    <Position X="14" Y="0.5" Width="3.5" />
+    <Position X="17.25" Y="0.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAABAAAAAAAQAAAAEABABAAAAAAIAAAABACYCA=</HashCode>
       <FileName>ControlBase.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Selector">
-    <Position X="14.75" Y="9" Width="3" />
+    <Position X="19.75" Y="9.75" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AISAAAAAAIAAAgAIQIAAAAiAABABAECIIAgACAACAAA=</HashCode>
+      <HashCode>AISAAAAAAIAAAgAIQIAAAAiAABABAECIIAgAAAACAAg=</HashCode>
       <FileName>Selector.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Label">
-    <Position X="0.5" Y="9" Width="3.75" />
+    <Position X="0.5" Y="9.75" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAiAAAAAEAAAAAAIAIAAAAAAAAAAAACIAAAAAAAIAAA=</HashCode>
+      <HashCode>AAiAAIAAEAAAAAAIAIAAAAAAAAgAAACIAAAAAAAAAAA=</HashCode>
       <FileName>Label.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ImageBox">
-    <Position X="5" Y="9" Width="4.5" />
+    <Position X="5" Y="9.75" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AACIAAAAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ImageBox.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Container">
-    <Position X="23.75" Y="9" Width="2.75" />
+    <Position X="30.25" Y="9.75" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAAAAAAAEAAAAAAAABQAAAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AACAAAQAAAAAAAAEAAAAAAAABQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Container.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Panel">
-    <Position X="28" Y="12" Width="3" />
+    <Position X="34.5" Y="13.25" Width="3.25" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAQAACAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
       <FileName>Panel.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SelectorGroup">
-    <Position X="21.5" Y="12" Width="3.5" />
+    <Position X="28.25" Y="13.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AACABAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAAIAAAAA=</HashCode>
+      <HashCode>AACAAAAEQAAAAAAAAAAAAAAABAAAEAAAAAgAAIAAAAA=</HashCode>
       <FileName>SelectorGroup.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RadioButtonGroup">
-    <Position X="19.25" Y="15" Width="3.75" />
+    <Position X="26" Y="17" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAIACAAA=</HashCode>
       <FileName>RadioButtonGroup.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CheckboxGroup">
-    <Position X="23.75" Y="15" Width="3.5" />
+    <Position X="30.25" Y="17" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACA=</HashCode>
       <FileName>CheckboxGroup.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Checkbox">
-    <Position X="14" Y="15" Width="1.75" />
+    <Position X="17.25" Y="16.25" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Checkbox.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RadioButton">
-    <Position X="16.5" Y="15" Width="2" />
+    <Position X="21.5" Y="16.25" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACA=</HashCode>
       <FileName>RadioButton.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Window">
-    <Position X="28.75" Y="15" Width="1.75" />
+    <Position X="34.75" Y="16.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAAAAAAAAAACAQAAAAAAAAAACAAAAAA=</HashCode>
+      <HashCode>AAAAAAAEQAAAAAAAAAAAAAACAQAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Window.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Button">
-    <Position X="10.25" Y="9" Width="3" />
+    <Position X="10" Y="9.75" Width="6.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAAgABAAAAAAAAAAAAAABAAAAAIIAAAAAECAAA=</HashCode>
+      <HashCode>AESAAIAAAAAAggAIQAAAAAAAABgAAAAIIAAAAAECAAA=</HashCode>
       <FileName>Button.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Color">
-    <Position X="32" Y="0.5" Width="1.5" />
+  <Class Name="Color" Collapsed="true">
+    <Position X="38.75" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Struct Name="Color::Values">
-        <TypeIdentifier>
-          <NewMemberFileName>Color.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Struct>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAIAQABgAAIAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAACIAQgBgAAAAAA=</HashCode>
       <FileName>Color.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ZControlBase">
-    <Position X="15" Y="5" Width="1.75" />
+    <Position X="18.25" Y="5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAYAAAAAAAEAAAAAAAAAYAEAAAAAABE=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAYAAAAAAQEAAAAAAAAAYAEgAAAAABE=</HashCode>
       <FileName>ZControlBase.h</FileName>
     </TypeIdentifier>
   </Class>
