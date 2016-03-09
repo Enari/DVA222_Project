@@ -15,6 +15,8 @@ class Button :
 {
 private:
 	string text;
+  bool hit;
+  bool pressed;
 public:
   Button();
   Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height);
