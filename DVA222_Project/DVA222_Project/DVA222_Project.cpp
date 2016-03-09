@@ -27,7 +27,7 @@ int _tmain(int argc, char** argv)
   ZControlBase* radioButton1 = new RadioButton("Jag är en Radiobutton", 100, 100);
 
   //Skapa MainWindow
-  Container* test = new Container(0, 0, 800, 600);
+  Panel* test = new Panel(100, 0, 800, 600, Color(0, 255, 0), 5000);
   test->AddObject(label);
   test->AddObject(radioButton1);
 

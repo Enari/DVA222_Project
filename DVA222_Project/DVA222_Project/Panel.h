@@ -5,11 +5,13 @@ class Panel :
   public Container
 {
 public:
-  Panel(int x, int y, int w, int h);
+  Panel(int x, int y, int w, int h, Color& color, int z);
   Panel(const Panel& other);
   ~Panel();
   Color GetBackgroudColor();
   void SetBackgroundColor(Color &newColor);
+  void OnPaint();
+
 private:
   Color* backgroundColor;
 };

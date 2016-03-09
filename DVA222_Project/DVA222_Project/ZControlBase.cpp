@@ -2,14 +2,14 @@
 #include "ZControlBase.h"
 
 
-ZControlBase::ZControlBase()
+ZControlBase::ZControlBase(int y=0, int x=0, int w=0, int h=0, int z=1000)
 {
-  Z = 1000;
-}
-
-ZControlBase::ZControlBase(int z)
-{
+  Y = y;
+  X = x;
   Z = z;
+  //No negative sizes. Make size zero if size is negative.
+  w < 0 ? Width = 0 : Width = w;
+  h < 0 ? Height = 0 : Height = h;
 }
 
 ZControlBase::ZControlBase(const ZControlBase & other) : ControlBase(other)

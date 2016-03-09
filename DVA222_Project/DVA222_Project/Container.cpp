@@ -3,19 +3,11 @@
 #include <algorithm>
 
 using namespace std;
-Container::Container(int y, int x, int w, int h)
-{
-  Y = y;
-  X = x;
-  //No negative sizes. Make size zero if size is negative.
-  w < 0 ? Width = 0 : Width = w;
-  h < 0 ? Height = 0 : Width = h;
 
-}
-
-Container::Container(int y, int x, int w, int h, int z) : ZControlBase(z)
+Container::Container(int y, int x, int w, int h, int z=500)
+  : ZControlBase(y, x, w, h, z)
 {
-  Container(y, x, w, h);
+
 }
 
 Container::Container(const Container & other) : ZControlBase(other)
