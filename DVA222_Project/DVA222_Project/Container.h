@@ -8,7 +8,7 @@ class Container :
   public ZControlBase
 {
 public:
-  Container(int y, int x, int w, int h, int z);
+  Container(int y, int x, int w, int h, int z=500);
   Container(const Container& other);
   ~Container();
   virtual void OnLoaded();

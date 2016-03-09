@@ -2,10 +2,10 @@
 #include "ZControlBase.h"
 
 
-ZControlBase::ZControlBase(int y=0, int x=0, int w=0, int h=0, int z=1000)
+ZControlBase::ZControlBase(int x, int y, int w, int h, int z)
 {
-  Y = y;
   X = x;
+  Y = y;
   Z = z;
   //No negative sizes. Make size zero if size is negative.
   w < 0 ? Width = 0 : Width = w;

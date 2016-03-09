@@ -103,7 +103,6 @@ void Selector::OnMouseDown(int button, int x, int y)
   //kollar om musen är inuti selectorn
   if(x > X && x < X + 16 && y > Y && y < Y + 16)
   {
-    std::cout << "Stop hitting me!!" << std::endl;
     pressed = !pressed;
   }
 }
