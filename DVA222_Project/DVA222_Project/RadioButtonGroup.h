@@ -7,5 +7,8 @@ class RadioButtonGroup :
 public:
   RadioButtonGroup(int x, int y, int w, int h, Label label);
   ~RadioButtonGroup();
+  void OnPaint(); 
+private:
+  ZControlBase* TheCheckeckedRadioButton;
 };
 
