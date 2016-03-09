@@ -6,10 +6,11 @@ class Panel :
 {
 public:
   Panel(int x, int y, int w, int h);
+  Panel(const Panel& other);
   ~Panel();
   Color GetBackgroudColor();
-  void SetBackgroundColor(Color newcolor);
+  void SetBackgroundColor(Color &newColor);
 private:
-  Color backgroundColor;
+  Color* backgroundColor;
 };
 

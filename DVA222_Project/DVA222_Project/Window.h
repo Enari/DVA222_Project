@@ -10,6 +10,6 @@ public:
   ~Window();
 private:
   string title;
-  Color bordercolor;
+  Color* bordercolor;
 };
 
