@@ -15,7 +15,7 @@ ImageBox::ImageBox(const ImageBox &other)
 	this->Y = other.Y;
 }
 
-ImageBox::ImageBox(string filePath, float posX, float posY)
+ImageBox::ImageBox(string filePath, int posX, int posY)
 {
 	filepath = filePath;
 	X = posX;
@@ -23,7 +23,7 @@ ImageBox::ImageBox(string filePath, float posX, float posY)
 	Width = Height = 0;
 }
 
-ImageBox::ImageBox(string filePath, float posX, float posY, int imageWidth, int imageHeight)
+ImageBox::ImageBox(string filePath, int posX, int posY, int imageWidth, int imageHeight)
 {
 	filepath = filePath;
 	X = posX;

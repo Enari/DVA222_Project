@@ -18,7 +18,7 @@ public:
   string GetText();
   void SetColor();
   Color GetColor();
-  bool isPressed();
+  bool IsPressed();
   void setStatus(bool pressed);
   virtual void OnMouseMove(int button, int x, int y);
   virtual void OnPaint();
@@ -30,7 +30,7 @@ private:
   Bitmap* hover;
   Bitmap* checked;
   Label* text;
-  Color* color;
+  Color* textcolor;
   bool hit;
   bool pressed;
 };

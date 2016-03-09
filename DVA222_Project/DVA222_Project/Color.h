@@ -13,6 +13,6 @@ public:
 	Color();
 	Color(const Color& other);
 	~Color();
-	void setColor(int r, int g, int b);
-	Values getColor();
+	void SetColor(int r, int g, int b);
+	Values GetColor();
 };
