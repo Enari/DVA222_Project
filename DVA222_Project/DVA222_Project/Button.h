@@ -19,6 +19,7 @@ private:
   bool pressed;
 public:
   Button();
+  Button(const Button &other);
   Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height);
   Button(string buttonText, int posX, int posY, int width, int height);
   ~Button();
