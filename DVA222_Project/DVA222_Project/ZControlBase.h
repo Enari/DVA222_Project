@@ -8,6 +8,7 @@ public:
   ZControlBase();
   ZControlBase(int z);
   ~ZControlBase();
+  bool operator> (ZControlBase & other);
   int GetZ();
   int GetX();
   int GetY();
