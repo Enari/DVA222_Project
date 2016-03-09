@@ -1,4 +1,5 @@
 #pragma once
+#include "StdAfx.h"
 #include "ControlBase.h"
 
 class ZControlBase :
@@ -12,7 +13,7 @@ public:
   bool operator> (const ZControlBase & other);
   bool operator>= (const ZControlBase & other);
   bool operator< (const ZControlBase & other);
-  bool operator>= (const ZControlBase & other);
+  bool operator<= (const ZControlBase & other);
   int GetZ();
   int GetX();
   int GetY();

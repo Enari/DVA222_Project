@@ -2,10 +2,10 @@
 #include "Checkbox.h"
 
 
-Checkbox::Checkbox(Label label) : Selector (label)
-{
-}
-
-
-Checkbox::~Checkbox()
-{}
+//Checkbox::Checkbox(Label label) : Selector (label)
+//{
+//}
+//
+//
+//Checkbox::~Checkbox()
+//{}

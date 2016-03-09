@@ -12,7 +12,7 @@ public:
   Container(int y, int x, int w, int h, int z);
   Container(const Container& other);
   ~Container();
-  void OnPrint(); //sort the objects in Z order and calls their OnPrint()
+  void OnPaint(); //sort the objects in Z order and calls their OnPrint()
   virtual void AddObject(ZControlBase &object);
 private:
   vector<ZControlBase> objects;
