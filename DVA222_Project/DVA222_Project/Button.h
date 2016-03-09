@@ -14,9 +14,10 @@ class Button :
   public ZControlBase
 {
 private:
-	string text;
+	Label* text;
 public:
   Button();
+  Button(const Button &other);
   Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height);
   Button(string buttonText, int posX, int posY, int width, int height);
   ~Button();

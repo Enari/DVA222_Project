@@ -6,6 +6,10 @@ Button::Button()
 {
 }
 
+Button::Button(const Button & other)
+{
+}
+
 Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height)
 {
 	
