@@ -26,14 +26,14 @@ Color::Color(const Color & other)
 Color::~Color()
 {}
 
-void Color::setColor(int r, int g, int b)
+void Color::SetColor(int r, int g, int b)
 {
 	this->r = r;
 	this->g = g;
 	this->b = b;
 }
 
-Color::Values Color::getColor()
+Color::Values Color::GetColor()
 {
 	Values v;
 	v.r = r;

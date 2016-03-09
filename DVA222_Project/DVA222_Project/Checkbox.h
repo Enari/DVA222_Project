@@ -8,9 +8,9 @@ class Checkbox :
 public:
   Checkbox();
   Checkbox(string text);
-  Checkbox(string text, Color& color);
+  Checkbox(string text, Color& textColor);
   Checkbox(string text, int x, int y);
-  Checkbox(string text, Color& color, int x, int y);
+  Checkbox(string text, Color& textColor, int x, int y);
   Checkbox(const Checkbox& other);
   ~Checkbox();
 private:
