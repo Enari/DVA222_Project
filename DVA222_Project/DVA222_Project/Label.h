@@ -16,8 +16,8 @@ public:
   ~Label();
   void SetText(string text);
 	string GetText();
-  void GetColor();
-  void setColor(int red, int green, int blue);
+  Color GetTextColor();
+  void SetTextColor(int red, int green, int blue);
 	void OnPaint();
 
 private:

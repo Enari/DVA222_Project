@@ -50,14 +50,14 @@ string Label::GetText()
 	return text;
 }
 
-void Label::setColor(int red, int green, int blue)
+void Label::SetTextColor(int red, int green, int blue)
 {
-	color->setColor(red, green, blue);
+	color->SetColor(red, green, blue);
 }
 
 void Label::OnPaint()
 {
-	SetColor(color->getColor().r, color->getColor().g, color->getColor().b);
+	SetColor(color->GetColor().r, color->GetColor().g, color->GetColor().b);
 	//SetColor(color->getColor().r, color->getColor().g, color->getColor().b);
 	DrawString(text, X, Y);
 }
