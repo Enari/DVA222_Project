@@ -12,14 +12,35 @@ ZControlBase::ZControlBase(int z)
   Z = z;
 }
 
+ZControlBase::ZControlBase(const ZControlBase & other)
+{
+  Z = other.Z;
+}
 
 ZControlBase::~ZControlBase()
 {}
 
+bool ZControlBase::operator>(const ZControlBase & other)
+{
+  return Z > other.Z;
+}
+
+bool ZControlBase::operator>=(const ZControlBase & other)
+{
+  return Z >= other.Z;
+}
+
+bool ZControlBase::operator<(const ZControlBase & other)
+{
+  return Z < other.Z;
+}
+bool ZControlBase::operator>= (const ZControlBase & other)
+{
+  return Z <= other.Z;
+}
 int ZControlBase::GetZ()
 {
   return Z;
-  X = 7;
 }
 
 int ZControlBase::GetX()
@@ -40,3 +61,4 @@ void ZControlBase::SetY(int y)
 {
   Y = y;
 }
+

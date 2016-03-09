@@ -7,8 +7,12 @@ class ZControlBase :
 public:
   ZControlBase();
   ZControlBase(int z);
+  ZControlBase(const ZControlBase& other);
   ~ZControlBase();
-  bool operator> (ZControlBase & other);
+  bool operator> (const ZControlBase & other);
+  bool operator>= (const ZControlBase & other);
+  bool operator< (const ZControlBase & other);
+  bool operator>= (const ZControlBase & other);
   int GetZ();
   int GetX();
   int GetY();
