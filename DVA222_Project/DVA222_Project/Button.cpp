@@ -2,19 +2,43 @@
 #include "Button.h"
 
 
-Button::Button(Label label)
+Button::Button()
 {
-	text = new Label(label);
+}
+
+Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height)
+{
+	
+}
+
+Button::Button(string buttonText, int posX, int posY, int width, int height)
+{
 }
 
 Button::~Button()
 {}
 
-void Button::onPaint()
+void Button::SetTextColor(Color & color)
 {
 }
 
-void Button::onLoaded()
+void Button::GetTextColor(Color & color)
+{
+}
+
+void Button::SetButtonColor(Color & color)
+{
+}
+
+void Button::GetButtonColor(Color & color)
+{
+}
+
+void Button::OnPaint()
+{
+}
+
+void Button::OnLoaded()
 {
 }
 
