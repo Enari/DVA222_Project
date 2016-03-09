@@ -24,14 +24,14 @@ void Container::OnPrint()
   }
 }
 
-void Container::AddObject(ZControlBase* object)
+void Container::AddObject(ZControlBase &object)
 {
   //If object is inside Container Set absolute position form relative position
-  if(object->GetX() < Width && object->GetY() < Height)
+  if(object.GetX() < Width && object.GetY() < Height)
   {
-    object->SetX(object->GetX() + X);
-    object->SetY(object->GetY() + Y);
+    object.SetX(object.GetX() + X);
+    object.SetY(object.GetY() + Y);
   }
   //Add object to the vector
-  objects.push_back(*object);
+  objects.push_back(object);
 }

@@ -2,10 +2,10 @@
 #include "SelectorGroup.h"
 
 
-SelectorGroup::SelectorGroup(int x, int y, int w, int h, Label label)
+SelectorGroup::SelectorGroup(int x, int y, int w, int h, string title)
   :Container(x, y, w, h)
 {
-	Title = new Label(label);
+	this->title = new Label(title);
 }
 
 
