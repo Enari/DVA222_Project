@@ -1,30 +1,29 @@
 #include "stdafx.h"
 #include "Selector.h"
 
+//temp
+#include <iostream>
+
 //Construktorerna kan inte kalla på varandra........!!!!!
 Selector::Selector()
   : Selector("")
-{
-  
-}
+{}
 
 Selector::Selector(string text)
   : Selector(text, 0, 0)
-{
-}
+{}
 
 
 Selector::Selector(string text, int x, int y)
-  : Selector(text, x, y, Color(0, 0, 0))
-{
-}
+  : Selector(text, Color(0, 0, 0), x, y)
+{}
 
-Selector::Selector(string text, int x, int y, Color& color)
+Selector::Selector(string text, Color& color, int x, int y)
 {
   X = x;
   Y = y;
   hit = pressed = false;
-  this->text = new Label(text, (x + 100), y, color.GetColor().r, color.GetColor().g, color.GetColor().b);
+  this->text = new Label(text, (x + 18), (y+13), color.GetColor().r, color.GetColor().g, color.GetColor().b);
 }
 
 Selector::Selector(Selector & other)
@@ -37,47 +36,74 @@ Selector::Selector(Selector & other)
   pressed = other.pressed;
 }
 
+//Done
 Selector::~Selector()
 {
   delete text;
 }
 
-void Selector::SetText()
+//Done
+void Selector::SetText(string text)
 {
+  this->text->SetText(text);
 }
 
+//Done
 string Selector::GetText()
 {
   return text->GetText();
 }
 
-void Selector::SetColor(Color& newColor)
+//Done
+void Selector::SetTextColor(Color& newColor)
 {
+  this->text->SetTextColor(newColor.GetColor().r, newColor.GetColor().g, newColor.GetColor().b);
 }
 
-//Color Selector::GetColor()
-//{
-//  return Color();
-//}
-
-void Selector::OnMouseMove(int button, int x, int y)
+//NOPE FIX ME PLEASE!
+Color Selector::GetTextColor()
 {
+  //return text->GetTextColor();
+  return Color();
 }
 
+//Done
+bool Selector::GetStatus()
+{
+  return pressed;
+}
+
+//Done
+void Selector::SetStatus(bool newStatus)
+{
+  pressed = newStatus;
+}
+
+//Done
 void Selector::OnPaint()
 {
   text->OnPaint();
 }
 
-void Selector::OnLoaded()
-{
-
-}
 
 void Selector::OnMouseDown(int button, int x, int y)
 {
+  //kollar om musen är inuti selectorn
+  if(x > X && x < X + 16 && y > Y && y < Y + 16)
+  {
+    std::cout << "Stop hitting me!!" << std::endl;
+    pressed = !pressed;
+  }
 }
-
-void Selector::OnMouseUp(int button, int x, int y)
-{
+  void Selector::OnMouseMove(int button, int x, int y)
+  {
+    //kollar om musen är inuti selectorn
+    if(x > X && x < X + 16 && y > Y && y < Y + 16)
+    {
+      hit = true;
+    }
+    else
+    {
+      hit = false;
+    }
 }

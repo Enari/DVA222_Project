@@ -2,8 +2,7 @@
 #include "StdAfx.h"
 #include "ZControlBase.h"
 #include "Label.h"
-#include "Graphix.h"
-#include "glut.h"
+#include "ImageBox.h"
 #include "string"
 #include "Color.h"
 
@@ -15,30 +14,27 @@ public:
   Selector();
   Selector(string text);
   Selector(string text, int x, int y);
-  Selector(string text, int x, int y, Color& color);
+  Selector(string text, Color& color, int x, int y);
   Selector(Selector& other);
   ~Selector();
 
-  void SetText();
+  void SetText(string text);
   string GetText();
   
-  void SetColor(Color& newColor);
-  Color GetColor();
+  void SetTextColor(Color& newColor);
+  Color GetTextColor();
   
-  bool IsPressed();
-  void setStatus(bool pressed);
+  bool GetStatus();
+  void SetStatus(bool newStatus);
   
-  virtual void OnMouseMove(int button, int x, int y);
   virtual void OnPaint();
-  virtual void OnLoaded();
   void OnMouseDown(int button, int x, int y);
-  void OnMouseUp(int button, int x, int y);
+  void OnMouseMove(int button, int x, int y);
 protected:
-  Bitmap* normal;
-  Bitmap* hover;
-  Bitmap* checked;
+  ImageBox* normal;
+  ImageBox* hover;
+  ImageBox* checked;
   Label* text;
-private:
   bool hit;
   bool pressed;
 };
