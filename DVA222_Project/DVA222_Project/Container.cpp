@@ -13,7 +13,7 @@ Container::Container(int x, int y, int w, int h, int z)
 
 }
 
-Container::Container(const Container & other) : ZControlBase(other)
+Container::Container(const Container & other)
 {
   objects = other.objects;
 }
@@ -32,8 +32,7 @@ void Container::OnLoaded()
 void Container::OnPaint()
 {
   //Sorterar Vektorn i storleksordning
-  /*    FUNKAR INTE                */
-  //sort(objects.begin(), objects.end());
+  sort(objects.begin(), objects.end());
 
   //Call All objects OnPaint
   for each (auto& object in objects)
@@ -84,13 +83,6 @@ void Container::OnResize(int width, int height)
 
 void Container::AddObject(ZControlBase* object)
 {
-  ////If object is inside Container Set absolute position form relative position
-  //if(object.GetX() < Width && object.GetY() < Height)
-  //{
-  //  object.SetX(object.GetX() + X);
-  //  object.SetY(object.GetY() + Y);
-  //}
-
   //Change position to relative
   object->SetX(object->GetX() + X);
   object->SetY(object->GetY() + Y);
