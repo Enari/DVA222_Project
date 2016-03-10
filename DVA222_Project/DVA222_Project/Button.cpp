@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Button.h"
 
+#define AVERAGE_LETTER_WIDTH 3
 
 Button::Button()
 {
@@ -19,7 +20,9 @@ Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX
 {
 	hit = pressed = false;
 	backgroundColor = buttonColor;
-	this->text->SetPosition(posX, posY+height/2);
+	this->text->SetPosition((posX+width/2)-buttonText.length()*AVERAGE_LETTER_WIDTH, posY+(height/2)+5); /*Bredden delat med två - längden på strängen
+																										 gånger avg. bredd på en bokstav för att
+																										 centrera i x led*/
 }
 
 Button::Button(string buttonText, int posX, int posY, int width, int height)
@@ -47,7 +50,8 @@ void Button::OnPaint()
 	if (pressed)
 	{
 		SetColor(128, 128, 128);
-		FillRectangle(X+3, Y+3, Width, Height);
+		FillRectangle(X, Y, Width, Height);
+		DrawRectangle(X - 1, Y - 1, Width + 2, Height + 2);
 	}
 	else if (hit)
 	{
