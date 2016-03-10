@@ -19,6 +19,7 @@ Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX
 {
 	hit = pressed = false;
 	backgroundColor = buttonColor;
+	this->text->SetPosition(posX, posY+height/2);
 }
 
 Button::Button(string buttonText, int posX, int posY, int width, int height)
@@ -59,28 +60,3 @@ void Button::OnPaint()
 	}
   ClickableItems::OnPaint();
 }
-
-//void Button::OnMouseMove(int button, int x, int y)
-//{
-//	if (x > X && x < X + Width && y>Y && y < Y + Height)
-//	{
-//		hit = true;
-//	}
-//	else
-//	{
-//		pressed = hit = false;
-//	}
-//}
-//
-//void Button::OnMouseDown(int button, int x, int y)
-//{
-//	if (hit && button==MOUSE_LEFT)
-//	{
-//		pressed = true;
-//	}
-//}
-//
-//void Button::OnMouseUp(int button, int x, int y)
-//{
-//	pressed = false;
-//}

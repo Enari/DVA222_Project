@@ -69,6 +69,11 @@ Color ClickableItems::GetTextColor()
 	return text->GetTextColor();
 }
 
+void ClickableItems::OnPaint()
+{
+	this->text->OnPaint();
+}
+
 void ClickableItems::OnMouseDown(int button, int x, int y)
 {
 	if (hit && button==MOUSE_LEFT)
