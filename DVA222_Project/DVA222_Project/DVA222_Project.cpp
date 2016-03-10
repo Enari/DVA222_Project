@@ -50,7 +50,7 @@ int _tmain(int argc, char** argv)
   bluePanel->AddObject(new Button("I am a button imprissoned in the panel", Color(0, 0, 0), Color(255, 255, 100), 30, 80, 320, 30));
 
   //Test checkboxGroup
-  CheckboxGroup* checkboxGroup = new CheckboxGroup("I am a checkbox Group", 30, 70, 370);
+  CheckboxGroup* checkboxGroup = new CheckboxGroup("I am a Checkbox Group", 30, 70, 365);
   checkboxGroup->AddObject(new Checkbox("I am a CheckBox."));
   checkboxGroup->AddObject(new Checkbox("I am another CheckBox."));
   Checkbox* selectedCheckbox1 = new Checkbox("I am a selected CheckBox.");
@@ -59,8 +59,17 @@ int _tmain(int argc, char** argv)
   selectedCheckbox2->SetStatus(true);
   checkboxGroup->AddObject(selectedCheckbox1);
   checkboxGroup->AddObject(selectedCheckbox2);
+
+  //Test RadioButtonGroup
+  RadioButtonGroup* radioButtonGroup = new RadioButtonGroup("I am a RadioButton Group", 405, 70, 365);
+  radioButtonGroup->AddObject(new RadioButton("I am a RadioButton."));
+  radioButtonGroup->AddObject(new RadioButton("I am another RadioButton."));
+  RadioButton* selectedadioButton = new RadioButton("I am The selected RadioButton. The One and only.");
+  selectedadioButton->SetStatus(true);
+  radioButtonGroup->AddObject(selectedadioButton);
+  radioButtonGroup->AddObject(new RadioButton("I am just another poor RadioButton."));
   
-  //Lägg till Object
+  //Add objects to main window
   mainWindow->AddObject(topText);
   mainWindow->AddObject(image);
   mainWindow->AddObject(freeRadioButton);
@@ -68,6 +77,7 @@ int _tmain(int argc, char** argv)
   mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
   mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
   mainWindow->AddObject(static_cast<ZControlBase*>(checkboxGroup));
+  mainWindow->AddObject(static_cast<ZControlBase*>(radioButtonGroup));
 
   //Typecasta mainvindow och kör InitOGL
   InitOGL(argc, argv, static_cast<ControlBase*>(mainWindow));
