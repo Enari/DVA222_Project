@@ -49,7 +49,9 @@ int _tmain(int argc, char** argv)
   bluePanel->AddObject(new Button("Hello, i am a button", Color(0, 0, 0), Color(255, 255, 100), 30, 100, 320, 30));
 
   //Test ElementGroup
-  ElementGroup* test = new ElementGroup("Testing ElementGroup", 30, 50, 370, 200);
+  SelectorGroup* test = new SelectorGroup("Testing ElementGroup", 30, 50, 370);
+  test->AddObject(new Checkbox("I am a CheckBox."));
+  test->AddObject(new Checkbox("I am another CheckBox."));
   
   //Lägg till Object
   mainWindow->AddObject(topText);

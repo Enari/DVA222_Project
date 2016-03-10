@@ -31,6 +31,7 @@ ElementGroup::~ElementGroup()
 void ElementGroup::OnLoaded()
 {
   title->SetPosition(X + 10, Y+12);
+  Container::OnLoaded();
 }
 
 void ElementGroup::OnPaint()

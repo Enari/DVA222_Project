@@ -6,8 +6,10 @@ class SelectorGroup
 {
 public:
   SelectorGroup();
+  SelectorGroup(string title, int x, int y, int w);
+  SelectorGroup(string title, Color& titleColor, Color boarderColor, int x, int y, int w);
   ~SelectorGroup();
 
-  void AddObject(const ZControlBase &object);
+  virtual void OnLoaded();
 };
 
