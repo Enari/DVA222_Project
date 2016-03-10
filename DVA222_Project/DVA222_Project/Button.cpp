@@ -3,31 +3,27 @@
 
 #define AVERAGE_LETTER_WIDTH 3
 
-Button::Button()
+Button::Button() 
+  : Button("", 0, 0, 0, 0)
 {
-	hit = pressed = false;
 }
 
-Button::Button(const Button & other)
-{
-	this->backgroundColor = other.backgroundColor;
-	this->hit = other.hit;
-	this->pressed = other.pressed;
-}
+Button::Button(string buttonText, int posX, int posY, int width, int height)
+  : Button(buttonText, Color(255, 255, 255), Color(0, 0, 0), posX, posY, width, height)
+{}
 
 Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height)
 	: ClickableItems(buttonText, textColor, posX, posY, width, height)
 {
-	hit = pressed = false;
 	backgroundColor = buttonColor;
-	text->SetPosition((posX+width/2)-buttonText.length()*AVERAGE_LETTER_WIDTH, posY+(height/2)+5); /*Bredden delat med två - längden på strängen
-																									 gånger avg bredd på en bokstav för att
-																							         centrera i x led*/
+  buttonTextLength = buttonText.length();
 }
 
-Button::Button(string buttonText, int posX, int posY, int width, int height)
-	: ClickableItems(buttonText, Color(0,0,0), posX, posY, width, height)
+Button::Button(const Button & other)
 {
+  this->backgroundColor = other.backgroundColor;
+  this->hit = other.hit;
+  this->pressed = other.pressed;
 }
 
 Button::~Button()
@@ -42,6 +38,13 @@ void Button::SetButtonColor(Color & color)
 Color Button::GetButtonColor(Color & color)
 {
 	return backgroundColor;
+}
+
+void Button::OnLoad()
+{
+  /*Bredden delat med två - längden på strängen centrera i x led*/
+  text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5); 
+  ClickableItems::OnLoaded();
 }
 
 void Button::OnPaint()

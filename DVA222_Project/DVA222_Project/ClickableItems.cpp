@@ -69,6 +69,12 @@ Color ClickableItems::GetTextColor()
 	return text->GetTextColor();
 }
 
+void ClickableItems::OnLoaded()
+{
+  //Varför fungerar inte detta????
+  //text->SetPosition((text->X + X, (int)text->GetY + Y);
+}
+
 void ClickableItems::OnPaint()
 {
 	this->text->OnPaint();

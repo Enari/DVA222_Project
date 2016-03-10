@@ -39,14 +39,14 @@ int _tmain(int argc, char** argv)
   //ZControlBase* freeRadioButton = new checkbox("i am a checkbox", 30, 330);
 
   ZControlBase* image = new ImageBox("ButtonNorm.bmp", 30, 400, 100, 100);
-  ZControlBase *button = new Button("Hello, i am a button", *new Color(255, 0, 0), *new Color(50, 125, 30), 260, 500, 350, 30);
-  
+   
   Panel* greenPanel = new Panel(400, 300, 370, 200, Color(0, 255, 110));
   greenPanel->AddObject(new Label("I am also a Panel. as you can see...", 30, 30, 0, 0, 0));
 
   Panel* bluePanel = new Panel(250, 400, 370, 170, Color(0, 200, 255));
   bluePanel->AddObject(new Label("I am a Panel. I can contain stuff...", 30, 30, 0, 0, 0));
   bluePanel->AddObject(new Button("Hello, i am a button", Color(255, 0, 0), Color(50, 125, 30), 30, 100, 320, 30));
+  
   //Lägg till Object
   mainWindow->AddObject(topText);
   /*
@@ -56,7 +56,6 @@ int _tmain(int argc, char** argv)
   mainWindow->AddObject(image);
   mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
   mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
-  mainWindow->AddObject(button);
 
   //Typecasta mainvindow och kör InitOGL
   InitOGL(argc, argv, static_cast<ControlBase*>(mainWindow));

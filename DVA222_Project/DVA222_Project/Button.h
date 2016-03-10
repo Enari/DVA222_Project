@@ -13,16 +13,18 @@ class Button :
 {
 private:
   Color backgroundColor;
+  int buttonTextLength;
 public:
   Button();
-  Button(const Button &other);
-  Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height);
   Button(string buttonText, int posX, int posY, int width, int height);
+  Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height);
+  Button(const Button& other);
   ~Button();
 
   void SetButtonColor(Color &color); //d
   Color GetButtonColor(Color &color); //d
 
+  void OnLoad();
   void OnPaint(); //d
 };
 
