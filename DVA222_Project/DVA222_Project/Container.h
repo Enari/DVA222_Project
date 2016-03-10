@@ -12,7 +12,7 @@ public:
   Container(int y, int x, int w, int h, int z=500);
   Container(const Container& other);
   ~Container();
-  virtual void OnLoaded();
+  virtual void OnLoaded(); //Updates Relative position to absolute position
   virtual void OnPaint(); //sort the objects in Z order and calls their OnPrint()
   virtual void OnKeyboard(unsigned char key, int x, int y);
   virtual void OnMouseDown(int button, int x, int y);
