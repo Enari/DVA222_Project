@@ -6,7 +6,7 @@ class ZControlBase :
   public ControlBase
 {
 public:
-  ZControlBase(int y = 0, int x = 0, int w = 0, int h = 0, int z = 1000);
+  ZControlBase(int x = 0, int y = 0, int w = 0, int h = 0, int z = 1000);
   ZControlBase(const ZControlBase& other);
   ~ZControlBase();
   bool operator> (const ZControlBase & other);
