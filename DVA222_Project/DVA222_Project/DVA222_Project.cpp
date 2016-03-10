@@ -38,6 +38,7 @@ int _tmain(int argc, char** argv)
 
   ZControlBase* image = new ImageBox("ButtonNorm.bmp", 30, 400, 100, 100);
  
+  ZControlBase *button = new Button("I am a button", *new Color(255, 0, 0), *new Color(0, 0, 255), 50, 50, 100, 100);
   
   Panel* greenPanel = new Panel(400, 300, 370, 200, Color(0, 255, 110));
   greenPanel->AddObject(new Label("I am also a Panel. as you can see...", 30, 30, 0, 0, 0));
@@ -52,6 +53,7 @@ int _tmain(int argc, char** argv)
   mainWindow->AddObject(image);
   mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
   mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
+  mainWindow->AddObject(button);
 
   //Typecasta mainvindow och kör InitOGL
   InitOGL(argc, argv, static_cast<ControlBase*>(mainWindow));
