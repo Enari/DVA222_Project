@@ -24,14 +24,13 @@ public:
   Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height);
   Button(string buttonText, int posX, int posY, int width, int height);
   ~Button();
-  void SetTextColor(Color &color); //d
-  Color GetTextColor(); //d
-  void SetButtonColor(Color &color); //d
-  Color GetButtonColor(Color &color); //d
-  void OnPaint(); //d
-  void OnLoaded(); //kanske inte behövs 
-  void OnMouseMove(int button, int x, int y); //d
-  void OnMouseDown(int button, int x, int y); //d
-  void OnMouseUp(int button, int x, int y); //d
+  void SetTextColor(Color &color); 
+  Color GetTextColor(); 
+  void SetButtonColor(Color &color); 
+  Color GetButtonColor(Color &color); 
+  void OnPaint(); 
+  void OnMouseMove(int button, int x, int y); 
+  void OnMouseDown(int button, int x, int y); 
+  void OnMouseUp(int button, int x, int y);
 };
 

@@ -20,7 +20,7 @@ Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX
 	: ZControlBase(posX, posY, width, height)
 {
 	hit = pressed = false;
-	text = new Label(buttonText, posX, posY+height/2);
+	text = new Label(buttonText, posX+6, posY+height/2+6);
 	text->SetTextColor(textColor);
 	tColor = textColor;
 	bColor = buttonColor;
@@ -31,7 +31,7 @@ Button::Button(string buttonText, int posX, int posY, int width, int height)
 {
 	hit = pressed = false;
 
-	text->SetText(buttonText);
+	text = new Label(buttonText, posX, posY);
 }
 
 Button::~Button()
@@ -64,12 +64,14 @@ void Button::OnPaint()
 	SetColor((bColor.GetColor().r), (bColor.GetColor().g), (bColor.GetColor().b));
 	if (pressed)
 	{
-		FillRectangle(X, Y, Width, Height);
+		SetColor(128, 128, 128);
+		FillRectangle(X+3, Y+3, Width, Height);
 		text->OnPaint();
 	}
 	else if (hit)
 	{
 		FillRectangle(X, Y, Width, Height);
+		DrawRectangle(X - 1, Y - 1, Width + 2, Height + 2);
 		text->OnPaint();
 	}
 	else
@@ -77,10 +79,6 @@ void Button::OnPaint()
 		FillRectangle(X, Y, Width, Height);
 		text->OnPaint();
 	}
-}
-
-void Button::OnLoaded() //Kanske inte behövs
-{
 }
 
 void Button::OnMouseMove(int button, int x, int y)
