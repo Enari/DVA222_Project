@@ -13,6 +13,7 @@ public:
   Label(string text);
   Label(string text, int x, int y);
   Label(string text, int x, int y, int red, int green, int blue);
+  Label(string text, Color& color);
   Label(string text, Color& color, int x, int y);
   Label(const Label& other);
   ~Label();

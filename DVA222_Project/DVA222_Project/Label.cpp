@@ -20,6 +20,12 @@ Label::Label(string text, int x, int y, int red, int green, int blue)
   : Label(text, Color(red, green, blue), x, y)
 {}
 
+Label::Label(string text, Color & color)
+  :Label(text, color, 0, 0)
+{
+
+}
+
 Label::Label(string text, Color& color, int x, int y)
 {
   this->text = text;

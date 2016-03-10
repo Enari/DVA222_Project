@@ -8,17 +8,20 @@ class ElementGroup :
 {
 public:
   ElementGroup();
-  ElementGroup(int x, int y, int w, int h, string title);
+  ElementGroup(string title, int x, int y, int w, int h);
+  ElementGroup(string title, Color& titleColor, Color boarderColor, int x, int y, int w, int h);
   ElementGroup(const ElementGroup& other);
   ~ElementGroup();
 
+  //Set&Get's
   void SetTitle(string title);
   string GetTitle();
-
   void SetBoarderColor(Color& color);
   Color GetBoarderColor();
 
-  void OnPaint(); //För att rita boardern
+  //Overloading stuff... 
+  virtual void OnLoaded();
+  virtual void OnPaint(); //För att rita boardern
 
 private:
   Label* title;
