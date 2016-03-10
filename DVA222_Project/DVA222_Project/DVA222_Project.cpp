@@ -34,18 +34,18 @@ int _tmain(int argc, char** argv)
   Panel* mainWindow = new Panel(0, 0, 800, 600, Color(200, 200, 200));
   
   //Skapa innehålle
-  ZControlBase* topText = new Label("I am a Label. Actuallt all the text that you see down there are Labels contained in the Panels. My text has a different color", 30, 30, 0, 0, 255);
+  ZControlBase* topText = new Label("I am a Label. Actually all the text that you see down there are Labels contained in the Panels. My text has a different color", 30, 30, 0, 0, 255);
   //ZControlBase* freeRadioButton = new RadioButton("I am a Radiobutton", 30, 300); ///Det går att skapas här
   //ZControlBase* freeRadioButton = new checkbox("i am a checkbox", 30, 330);
 
   ZControlBase* image = new ImageBox("ButtonNorm.bmp", 30, 400, 100, 100);
-   
+
   Panel* greenPanel = new Panel(400, 300, 370, 200, Color(0, 255, 110));
   greenPanel->AddObject(new Label("I am also a Panel. as you can see...", 30, 30, 0, 0, 0));
 
   Panel* bluePanel = new Panel(250, 400, 370, 170, Color(0, 200, 255));
   bluePanel->AddObject(new Label("I am a Panel. I can contain stuff...", 30, 30, 0, 0, 0));
-  bluePanel->AddObject(new Button("Hello, i am a button", Color(255, 0, 0), Color(50, 125, 30), 30, 100, 320, 30));
+  bluePanel->AddObject(new Button("Hello, i am a button", Color(0, 0, 0), Color(255, 255, 100), 30, 100, 320, 30));
   
   //Lägg till Object
   mainWindow->AddObject(topText);

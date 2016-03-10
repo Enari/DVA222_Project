@@ -24,7 +24,7 @@ public:
   void SetButtonColor(Color &color); //d
   Color GetButtonColor(Color &color); //d
 
-  void OnLoad();
+  void OnLoaded();
   void OnPaint(); //d
 };
 

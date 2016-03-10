@@ -23,7 +23,6 @@ public:
   void SetTextColor(Color& newColor);
   Color GetTextColor();
 
-  virtual void OnLoaded();
   virtual void OnPaint();
 
   virtual void OnMouseDown(int button, int x, int y);

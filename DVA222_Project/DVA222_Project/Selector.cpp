@@ -67,13 +67,14 @@ void Selector::OnPaint()
 void Selector::OnMouseDown(int button, int x, int y)
 {
   //kollar om musen är inuti selectorn
-  if(x > X && x < X + 16 && y > Y && y < Y + 16)
+  if(hit && button == MOUSE_LEFT)
   {
     pressed = !pressed;
   }
 }
-  void Selector::OnMouseMove(int button, int x, int y)
-  {
+
+void Selector::OnMouseMove(int button, int x, int y)
+{
     //kollar om musen är inuti selectorn
     if(x > X && x < X + 16 && y > Y && y < Y + 16)
     {
@@ -83,4 +84,10 @@ void Selector::OnMouseDown(int button, int x, int y)
     {
       hit = false;
     }
+}
+
+void Selector::OnMouseUp(int button, int x, int y)
+{
+	/*Måste overloada OnMouseUp, annars sätter Clickable items pressed == false varje gång
+	man trycker på en radiobutton.*/
 }

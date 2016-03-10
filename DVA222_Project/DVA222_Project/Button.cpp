@@ -16,7 +16,7 @@ Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX
 	: ClickableItems(buttonText, textColor, posX, posY, width, height)
 {
 	backgroundColor = buttonColor;
-  buttonTextLength = buttonText.length();
+    buttonTextLength = buttonText.length();
 }
 
 Button::Button(const Button & other)
@@ -40,11 +40,10 @@ Color Button::GetButtonColor(Color & color)
 	return backgroundColor;
 }
 
-void Button::OnLoad()
+void Button::OnLoaded()
 {
   /*Bredden delat med två - längden på strängen centrera i x led*/
-  text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5); 
-  ClickableItems::OnLoaded();
+  this->text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);   
 }
 
 void Button::OnPaint()

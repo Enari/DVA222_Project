@@ -23,6 +23,7 @@ public:
   
   virtual void OnPaint();
   void OnMouseDown(int button, int x, int y);
+  void OnMouseUp(int button, int x, int y);
   void OnMouseMove(int button, int x, int y);
 protected:
   ImageBox* normal;
