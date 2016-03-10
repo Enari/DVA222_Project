@@ -20,7 +20,7 @@ public:
   virtual void OnMouseMove(int button, int x, int y);
   virtual void OnResize(int width, int height);
   virtual void AddObject(ZControlBase* object);
-private:
+protected:
   vector<ZControlBase*> objects;
 };
 
