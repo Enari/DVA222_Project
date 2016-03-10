@@ -1,5 +1,4 @@
 #pragma once
-#include "Panel.h"
 #include "ElementGroup.h"
 
 class Window 
@@ -8,6 +7,8 @@ class Window
 public:
   Window();
   Window(const Window& other);
+  Window(string title, int x, int y, int w, int h);
+  Window(string title, Color& titleColor, Color& borderColor, Color& backgroundColor, int x, int y, int w, int h);
   ~Window();
 
   Color GetBackgroudColor();
@@ -20,5 +21,9 @@ public:
 
 private:
   Color* backgroundColor;
+  bool pressed;
+  bool hit;
+  int mousePressedPosX, mousePressedPosY;
+  int PressedPosX, PressedPosY;
 };
 

@@ -31,7 +31,11 @@ int _tmain(int argc, char** argv)
   //------------------------------------------------------------------------------------------------------------------------------------
 
   //Skapa MainWindow
-  Panel* mainWindow = new Panel(0, 0, 800, 600, Color(200, 200, 200));
+  Window* mainWindow = new Window("I am a dragable window", Color(255, 252, 255), Color(255, 0, 255), Color(0, 252, 255), 100, 300, 600, 300);
+
+  //Create Window
+  //Window* win = new Window("I am a dragable window", Color(255,252,255), Color(255, 0, 255), Color(0, 252, 255), 100, 300, 600, 300);
+  //win->AddObject(new Label("I am a Label in a window..", 50, 30, 255, 32, 32));
   
   //Create Content
   ZControlBase* topText = new Label("I am a Label. Actually all the text that you see down there are Labels contained in the Panels. My text has a different color", 30, 30, 0, 0, 255);
@@ -70,14 +74,15 @@ int _tmain(int argc, char** argv)
   radioButtonGroup->AddObject(new RadioButton("I am just another poor RadioButton."));
   
   //Add objects to main window
-  mainWindow->AddObject(topText);
-  mainWindow->AddObject(image);
-  mainWindow->AddObject(freeRadioButton);
-  mainWindow->AddObject(freeCheckbox);
-  mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
-  mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
-  mainWindow->AddObject(static_cast<ZControlBase*>(checkboxGroup));
+  //mainWindow->AddObject(topText);
+  //mainWindow->AddObject(image);
+  //mainWindow->AddObject(freeRadioButton);
+  //mainWindow->AddObject(freeCheckbox);
+  //mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
+  //mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
+  //mainWindow->AddObject(static_cast<ZControlBase*>(checkboxGroup));
   mainWindow->AddObject(static_cast<ZControlBase*>(radioButtonGroup));
+  //mainWindow->AddObject(win);
 
   //Typecasta mainvindow och kör InitOGL
   InitOGL(argc, argv, static_cast<ControlBase*>(mainWindow));

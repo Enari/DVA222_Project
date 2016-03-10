@@ -18,6 +18,8 @@ ZControlBase::ZControlBase(const ZControlBase & other) : ControlBase(other)
   Z = other.Z;
   Width = other.Width;
   Height = other.Height;
+  SetPressedPosX();
+  SetPressedPosY();
 
 }
 
@@ -62,6 +64,16 @@ int ZControlBase::GetY()
   return Y;
 }
 
+int ZControlBase::GetPressedPosX()
+{
+  return PressedPosX;
+}
+
+int ZControlBase::GetPressedPosY()
+{
+  return PressedPosY;
+}
+
 void ZControlBase::SetX(int x)
 {
   X = x;
@@ -70,5 +82,21 @@ void ZControlBase::SetX(int x)
 void ZControlBase::SetY(int y)
 {
   Y = y;
+}
+
+void ZControlBase::SetPressedPosX()
+{
+  PressedPosX = X;
+}
+
+void ZControlBase::SetPressedPosY()
+{
+  PressedPosY = Y;
+}
+
+void ZControlBase::UpdatePosition(int deltaX, int deltaY)
+{
+  X = PressedPosX + deltaX;
+  Y = PressedPosY + deltaY;
 }
 

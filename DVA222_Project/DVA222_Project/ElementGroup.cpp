@@ -5,10 +5,10 @@
 ElementGroup::ElementGroup()
 {}
 
-ElementGroup::ElementGroup(string title,int x, int y, int w, int h)
+ElementGroup::ElementGroup(string title, int x, int y, int w, int h)
   :ElementGroup(title, Color(0, 0, 0), Color(0, 0, 0), x, y, w, h)
 {
-	this->title = new Label(title);
+  this->title = new Label(title);
 }
 
 ElementGroup::ElementGroup(string title, Color & titleColor, Color boarderColor, int x, int y, int w, int h)
@@ -30,7 +30,7 @@ ElementGroup::~ElementGroup()
 
 void ElementGroup::OnLoaded()
 {
-  title->SetPosition(X + 10, Y+12);
+  title->SetPosition(X + 10, Y + 12);
   Container::OnLoaded();
 }
 
@@ -47,9 +47,45 @@ void ElementGroup::OnPaint()
   //Dwar headerboarder
   SetColor(0, 0, 0);
   DrawRectangle(X, Y, Width, 15);
-  
+
   //Draw the title
   title->OnPaint();
 
   Container::OnPaint();
+}
+void ElementGroup::OnMouseMove(int button, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnMouseMove(button, x, y);
+    object->OnLoaded();
+  }
+  Container::OnMouseMove(button, x, y);
+}
+
+void ElementGroup::OnKeyboard(unsigned char key, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnKeyboard(key, x, y);
+  }
+  Container::OnKeyboard(key, x, y);
+}
+
+void ElementGroup::OnMouseDown(int button, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnMouseDown(button, x, y);
+  }
+  Container::OnMouseDown(button, x, y);
+}
+
+void ElementGroup::OnMouseUp(int button, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnMouseUp(button, x, y);
+  }
+  Container::OnMouseUp(button, x, y);
 }
