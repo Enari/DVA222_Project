@@ -44,14 +44,21 @@ int _tmain(int argc, char** argv)
   greenPanel->AddObject(new Label("I am also a Panel. as you can see...", 30, 30, 0, 0, 0));
   greenPanel->AddObject(new Checkbox("I am a Captured CheckBox.", 30, 50));
 
-  Panel* bluePanel = new Panel(250, 400, 370, 170, Color(0, 200, 255));
-  bluePanel->AddObject(new Label("I am a Panel. I can contain stuff...", 30, 30, 0, 0, 0));
-  bluePanel->AddObject(new Button("Hello, i am a button", Color(0, 0, 0), Color(255, 255, 100), 30, 100, 320, 30));
+  Panel* bluePanel = new Panel(250, 450, 405, 120, Color(0, 200, 255));
+  bluePanel->AddObject(new Label("I am a Panel. I can contain stuff inside (like the button below).", 30, 30, 0, 0, 0));
+  bluePanel->AddObject(new Label("I can also have different colors.", 30, 48, 0, 0, 0));
+  bluePanel->AddObject(new Button("I am a button imprissoned in the panel", Color(0, 0, 0), Color(255, 255, 100), 30, 80, 320, 30));
 
-  //Test ElementGroup
-  SelectorGroup* test = new SelectorGroup("Testing ElementGroup", 30, 50, 370);
-  test->AddObject(new Checkbox("I am a CheckBox."));
-  test->AddObject(new Checkbox("I am another CheckBox."));
+  //Test checkboxGroup
+  CheckboxGroup* checkboxGroup = new CheckboxGroup("I am a checkbox Group", 30, 70, 370);
+  checkboxGroup->AddObject(new Checkbox("I am a CheckBox."));
+  checkboxGroup->AddObject(new Checkbox("I am another CheckBox."));
+  Checkbox* selectedCheckbox1 = new Checkbox("I am a selected CheckBox.");
+  Checkbox* selectedCheckbox2 = new Checkbox("I am another selected CheckBox.");
+  selectedCheckbox1->SetStatus(true);
+  selectedCheckbox2->SetStatus(true);
+  checkboxGroup->AddObject(selectedCheckbox1);
+  checkboxGroup->AddObject(selectedCheckbox2);
   
   //Lägg till Object
   mainWindow->AddObject(topText);
@@ -60,7 +67,7 @@ int _tmain(int argc, char** argv)
   mainWindow->AddObject(freeCheckbox);
   mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
   mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
-  mainWindow->AddObject(static_cast<ZControlBase*>(test));
+  mainWindow->AddObject(static_cast<ZControlBase*>(checkboxGroup));
 
   //Typecasta mainvindow och kör InitOGL
   InitOGL(argc, argv, static_cast<ControlBase*>(mainWindow));
