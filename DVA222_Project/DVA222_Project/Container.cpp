@@ -28,11 +28,11 @@ void Container::OnLoaded()
 
 void Container::OnPaint()
 {
-  //Waiting for issue: DVA222P-15
-  sort(objects.begin(), objects.end());
+  //Sorterar Vektorn i storleksordning
+  /*    FUNKAR INTE                */
+  //sort(objects.begin(), objects.end());
 
   //Call All objects OnPaint
-  //auto& == super leet haxx
   for each (auto& object in objects)
   { 
     object->OnPaint();
