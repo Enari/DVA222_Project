@@ -35,6 +35,8 @@ int _tmain(int argc, char** argv)
   //Skapa innehålle
   ZControlBase* topText = new Label("I am a Label. Actuallt all the text that you see down there are Labels contained in the Panels. My text has a different color", 30, 30, 0, 0, 255);
   ZControlBase* freeRadioButton = new RadioButton("I am a Radiobutton", 30, 300); ///Det går att skapas här
+
+  ZControlBase* image = new ImageBox("ButtonNorm.bmp", 30, 400, 100, 100);
  
   
   Panel* greenPanel = new Panel(400, 300, 370, 200, Color(0, 255, 110));
@@ -47,6 +49,7 @@ int _tmain(int argc, char** argv)
   mainWindow->AddObject(topText);
   mainWindow->AddObject(freeRadioButton);
   mainWindow->AddObject(new Checkbox("I am a Checkbox", 30, 330)); ///Och direct här!
+  mainWindow->AddObject(image);
   mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
   mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
 
