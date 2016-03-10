@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Container.h"
+#include "ZControlBaseCompareZ.h"
 #include <algorithm>
 
 using namespace std;
@@ -34,8 +35,9 @@ void Container::OnLoaded()
 
 void Container::OnPaint()
 {
+ 
   //Sorterar Vektorn i storleksordning
-  sort(objects.begin(), objects.end());
+  sort(objects.begin(), objects.end(), ZControlBaseCompareZ());
 
   //Call All objects OnPaint
   for each (auto& object in objects)
@@ -43,6 +45,7 @@ void Container::OnPaint()
     object->OnPaint();
   }
 }
+
 
 void Container::OnMouseMove(int button, int x, int y)
 {
