@@ -39,8 +39,9 @@ int _tmain(int argc, char** argv)
   //ZControlBase* freeRadioButton = new checkbox("i am a checkbox", 30, 330);
 
   ZControlBase* image = new ImageBox("ButtonNorm.bmp", 30, 400, 100, 100);
-  ZControlBase* radio = new RadioButton("Hej", Color(255,0,0), 50, 30);
-  ZControlBase* check = new Checkbox("Check", 50, 50);
+  
+  ZControlBase* radio = new RadioButton("I am a free RadioButton. This Window is my container", 50, 300);
+  ZControlBase* check = new Checkbox("I am a free CheckBox.", 50, 330);
 
   Panel* greenPanel = new Panel(400, 300, 370, 200, Color(0, 255, 110));
   greenPanel->AddObject(new Label("I am also a Panel. as you can see...", 30, 30, 0, 0, 0));
