@@ -11,16 +11,23 @@ ImageBox::ImageBox(const ImageBox &other)
 {
 	this->filepath = other.filepath;
 	this->image = other.image;
+	this->X = other.X;
+	this->Y = other.Y;
 }
 
 ImageBox::ImageBox(string filePath, int posX, int posY)
-  :ImageBox(filePath, posX, posY, 0, 0)
-{}
-
-ImageBox::ImageBox(string filePath, int posX, int posY, int imageWidth, int imageHeight)
-  : ZControlBase(posX, posY)
 {
 	filepath = filePath;
+	X = posX;
+	Y = posY;
+	Width = Height = 0;
+}
+
+ImageBox::ImageBox(string filePath, int posX, int posY, int imageWidth, int imageHeight)
+{
+	filepath = filePath;
+	X = posX;
+	Y = posY;
 	Height = imageHeight;
 	Width = imageWidth;
 }
