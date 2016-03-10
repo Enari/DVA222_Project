@@ -24,13 +24,19 @@
 RadioButtonGroup::RadioButtonGroup(string title, int x, int y, int w)
   : SelectorGroup(title, x, y, w)
 {
-  TheCheckeckedRadioButton = NULL;
+  theCheckeckedRadioButton = NULL;
 }
 
 RadioButtonGroup::RadioButtonGroup(string title, Color & titleColor, Color boarderColor, int x, int y, int w)
   : SelectorGroup(title, titleColor, boarderColor, x, y, w)
 {
-  TheCheckeckedRadioButton = NULL;
+  theCheckeckedRadioButton = NULL;
+}
+
+void RadioButtonGroup::OnLoaded()
+{
+  OnMouseUp(0, 0, 0);
+  SelectorGroup::OnLoaded();
 }
 
 void RadioButtonGroup::OnMouseUp(int button, int x, int y)
@@ -38,15 +44,15 @@ void RadioButtonGroup::OnMouseUp(int button, int x, int y)
   for each(RadioButton* object in objects)
   {
     //If there's no checked radiobutton
-    if(object->GetStatus() == true && TheCheckeckedRadioButton == NULL)
+    if(object->GetStatus() == true && theCheckeckedRadioButton == NULL)
     {
-      TheCheckeckedRadioButton = object;
+      theCheckeckedRadioButton = object;
     }
     //Check if it's not the same as it was before
-    if(object->GetStatus() == true && object != TheCheckeckedRadioButton)
+    if(object->GetStatus() == true && object != theCheckeckedRadioButton)
     {
-      TheCheckeckedRadioButton->SetStatus(false);
-      TheCheckeckedRadioButton = object;
+      theCheckeckedRadioButton->SetStatus(false);
+      theCheckeckedRadioButton = object;
     }
   }
   Container::OnMouseUp(button, x, y);
