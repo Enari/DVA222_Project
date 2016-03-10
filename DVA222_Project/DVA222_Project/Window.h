@@ -1,17 +1,24 @@
 #pragma once
 #include "Panel.h"
+#include "ElementGroup.h"
 
-class Window :
-  public Panel
+class Window 
+  :  public ElementGroup
 {
 public:
   Window();
   Window(const Window& other);
-  void SetTitle(string title);
-  string GetTitle();
   ~Window();
+
+  Color GetBackgroudColor();
+  void SetBackgroundColor(Color &newColor);
+  
+  void OnPaint();
+  virtual void OnMouseDown(int button, int x, int y);
+  virtual void OnMouseUp(int button, int x, int y);
+  virtual void OnMouseMove(int button, int x, int y);
+
 private:
-  string title;
-  Color* bordercolor;
+  Color* backgroundColor;
 };
 

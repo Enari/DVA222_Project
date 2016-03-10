@@ -11,7 +11,7 @@ Button::Button(const Button & other)
 {
 	this->text = other.text;
 	this->tColor = other.tColor;
-	this->bColor = other.bColor;
+	this->backgroundColor = other.backgroundColor;
 	this->hit = other.hit;
 	this->pressed = other.pressed;
 }
@@ -23,7 +23,7 @@ Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX
 	text = new Label(buttonText, posX, posY+height/2);
 	text->SetTextColor(textColor);
 	tColor = textColor;
-	bColor = buttonColor;
+	backgroundColor = buttonColor;
 }
 
 Button::Button(string buttonText, int posX, int posY, int width, int height)
@@ -51,17 +51,17 @@ Color Button::GetTextColor()
 
 void Button::SetButtonColor(Color & color)
 {
-	bColor = color;
+	backgroundColor = color;
 }
 
 Color Button::GetButtonColor(Color & color)
 {
-	return bColor;
+	return backgroundColor;
 }
 
 void Button::OnPaint()
 {
-	SetColor((bColor.GetColor().r), (bColor.GetColor().g), (bColor.GetColor().b));
+	SetColor((backgroundColor.GetColor().r), (backgroundColor.GetColor().g), (backgroundColor.GetColor().b));
 	if (pressed)
 	{
 		FillRectangle(X, Y, Width, Height);

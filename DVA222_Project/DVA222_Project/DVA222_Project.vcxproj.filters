@@ -45,9 +45,6 @@
     <ClInclude Include="Panel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SelectorGroup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CheckboxGroup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -73,6 +70,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ZControlBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClickableItems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ElementGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectorGroup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -107,9 +113,6 @@
     <ClCompile Include="Panel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SelectorGroup.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CheckboxGroup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -132,6 +135,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ZControlBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClickableItems.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ElementGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectorGroup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

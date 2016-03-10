@@ -78,6 +78,7 @@
     <ClInclude Include="Button.h" />
     <ClInclude Include="Checkbox.h" />
     <ClInclude Include="CheckboxGroup.h" />
+    <ClInclude Include="ClickableItems.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Container.h" />
     <ClInclude Include="Graphix.h" />
@@ -90,6 +91,7 @@
     <ClInclude Include="RadioButtonGroup.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Selector.h" />
+    <ClInclude Include="ElementGroup.h" />
     <ClInclude Include="SelectorGroup.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -100,6 +102,7 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Checkbox.cpp" />
     <ClCompile Include="CheckboxGroup.cpp" />
+    <ClCompile Include="ClickableItems.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Container.cpp" />
     <ClCompile Include="DVA222_Project.cpp" />
@@ -112,6 +115,7 @@
     <ClCompile Include="RadioButton.cpp" />
     <ClCompile Include="RadioButtonGroup.cpp" />
     <ClCompile Include="Selector.cpp" />
+    <ClCompile Include="ElementGroup.cpp" />
     <ClCompile Include="SelectorGroup.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

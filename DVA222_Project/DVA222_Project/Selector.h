@@ -1,13 +1,13 @@
 #pragma once
 #include "StdAfx.h"
-#include "ZControlBase.h"
+#include "ClickableItems.h"
 #include "Label.h"
 #include "ImageBox.h"
 #include "string"
 #include "Color.h"
 
 class Selector :
-  public ZControlBase
+  public ClickableItems
 {
 public:
   //Constructors, all working.
@@ -17,12 +17,6 @@ public:
   Selector(string text, Color& color, int x, int y);
   Selector(Selector& other);
   ~Selector();
-
-  void SetText(string text);
-  string GetText();
-  
-  void SetTextColor(Color& newColor);
-  Color GetTextColor();
   
   bool GetStatus();
   void SetStatus(bool newStatus);
@@ -34,8 +28,5 @@ protected:
   ImageBox* normal;
   ImageBox* hover;
   ImageBox* checked;
-  Label* text;
-  bool hit;
-  bool pressed;
 };
 
