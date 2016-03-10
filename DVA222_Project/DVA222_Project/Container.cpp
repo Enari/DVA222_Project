@@ -25,6 +25,9 @@ void Container::OnLoaded()
 {
   for each (auto& object in objects)
   {
+    //Change position to relative
+    object->SetX(object->GetX() + X);
+    object->SetY(object->GetY() + Y);
     object->OnLoaded();
   }
 }
@@ -83,10 +86,6 @@ void Container::OnResize(int width, int height)
 
 void Container::AddObject(ZControlBase* object)
 {
-  //Change position to relative
-  object->SetX(object->GetX() + X);
-  object->SetY(object->GetY() + Y);
-
   //Add object to the vector
   objects.push_back(object);
 }
