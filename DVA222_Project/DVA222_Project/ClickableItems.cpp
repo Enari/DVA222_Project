@@ -30,7 +30,7 @@ ClickableItems::ClickableItems(string text, Color & color, int x, int y, int w, 
 	: ZControlBase(x, y, w, h)
 {
 	hit = pressed = false;
-	this->text = new Label(text, x, y, color.GetColor().r, color.GetColor().g, color.GetColor().b);
+	this->text = new Label(text, color, x, y);
 }
 
 
