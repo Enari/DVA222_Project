@@ -11,8 +11,9 @@ public:
 	Label();
 	Label(const Label& other);
   Label(string text);
-	Label(string text, int x, int y);
-	Label(string text, int x, int y, int red, int green, int blue);
+  Label(string text, int x, int y);
+  Label(string text, int x, int y, int red, int green, int blue);
+  Label(string text, Color& color, int x, int y);
   ~Label();
   void SetText(string text);
 	string GetText();
