@@ -8,6 +8,7 @@ class Container :
   public ZControlBase
 {
 public:
+  Container();
   Container(int y, int x, int w, int h, int z=500);
   Container(const Container& other);
   ~Container();

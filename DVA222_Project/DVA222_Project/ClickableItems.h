@@ -1,14 +1,19 @@
 #pragma once
 #include "ZControlBase.h"
+#include "Graphix.h"
+#include "Label.h"
+#include "Color.h"
+#include <string>
+
 class ClickableItems :
   public ZControlBase
 {
 public:
   ClickableItems();
-  ClickableItems();
   ClickableItems(string text);
   ClickableItems(string text, int x, int y);
   ClickableItems(string text, Color& color, int x, int y);
+  ClickableItems(string text, Color& color, int x, int y, int w, int h);
   ClickableItems(ClickableItems& other);
   ~ClickableItems();
 

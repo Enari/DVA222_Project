@@ -74,9 +74,3 @@ void Label::SetPosition(int x, int y)
 	this->X = x;
 	this->Y = y;
 }
-
-Point Label::GetPosition()
-{
-	Point temp(X, Y);
-	return temp;
-}

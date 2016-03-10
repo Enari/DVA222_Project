@@ -4,6 +4,9 @@
 
 using namespace std;
 
+Container::Container()
+{}
+
 Container::Container(int x, int y, int w, int h, int z)
   : ZControlBase(x, y, w, h, z)
 {

@@ -19,51 +19,19 @@ Selector::Selector(string text, int x, int y)
 {}
 
 Selector::Selector(string text, Color& color, int x, int y)
-  : ZControlBase(x, y)
-{
-  hit = pressed = false;
-  this->text = new Label(text, (x + 18), (y+13), color.GetColor().r, color.GetColor().g, color.GetColor().b);
-}
+  : ClickableItems(text, color, x, y)
+{}
 
 Selector::Selector(Selector & other)
 {
   normal = other.normal;
   hover = other.hover;
   checked = other.checked;
-  text = other.text;
-  hit = other.hit;
-  pressed = other.pressed;
 }
 
 //Done
 Selector::~Selector()
 {
-  delete text;
-}
-
-//Done
-void Selector::SetText(string text)
-{
-  this->text->SetText(text);
-}
-
-//Done
-string Selector::GetText()
-{
-  return text->GetText();
-}
-
-//Done
-void Selector::SetTextColor(Color& newColor)
-{
-  this->text->SetTextColor(newColor.GetColor().r, newColor.GetColor().g, newColor.GetColor().b);
-}
-
-//Waiting for label to implement GetTextColor();
-Color Selector::GetTextColor()
-{
-  //return text->GetTextColor();
-  return Color();
 }
 
 //Done
@@ -93,7 +61,6 @@ void Selector::OnPaint()
   {
     normal->OnPaint();
   }
-  text->OnPaint();
 }
 
 

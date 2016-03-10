@@ -6,9 +6,7 @@ Size, position, text, and other properties of the button should be changeable th
 */
 #pragma once
 #include "ClickableItems.h"
-#include "Label.h"
-#include "Color.h"
-#include "Graphix.h"
+
 
 class Button :
   public ClickableItems

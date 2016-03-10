@@ -1,6 +1,5 @@
 #pragma once
 #include "Selector.h"
-#include <string>
 
 class RadioButton :
   public Selector

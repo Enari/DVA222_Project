@@ -21,11 +21,9 @@ public:
   void SetTextColor(int red, int green, int blue);
 	void OnPaint();
 	void SetPosition(int x, int y);
-	Point GetPosition();
 
 private:
 	string text;
-  //Typ? skapa en struct för color?
 	Color* color;
 };
 
