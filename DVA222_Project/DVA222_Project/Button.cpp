@@ -20,7 +20,8 @@ Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX
 	: ZControlBase(posX, posY, width, height)
 {
 	hit = pressed = false;
-	text = new Label(buttonText);
+	text = new Label(buttonText, posX, posY+height/2);
+	text->SetTextColor(textColor);
 	tColor = textColor;
 	bColor = buttonColor;
 }
@@ -40,7 +41,7 @@ Button::~Button()
 
 void Button::SetTextColor(Color & color)
 {
-	text->SetTextColor(color.GetColor().r, color.GetColor().g, color.GetColor().b);
+	text->SetTextColor(color);
 }
 
 Color Button::GetTextColor()
@@ -60,21 +61,19 @@ Color Button::GetButtonColor(Color & color)
 
 void Button::OnPaint()
 {
+	SetColor((bColor.GetColor().r), (bColor.GetColor().g), (bColor.GetColor().b));
 	if (pressed)
 	{
-		SetColor((bColor.GetColor().r)-5, (bColor.GetColor().g)-5, (bColor.GetColor().b)-5); //-5 fade på knappen?
 		FillRectangle(X, Y, Width, Height);
 		text->OnPaint();
 	}
 	else if (hit)
 	{
-		SetColor(bColor.GetColor().r+5, bColor.GetColor().g+5, bColor.GetColor().b+5); 
 		FillRectangle(X, Y, Width, Height);
 		text->OnPaint();
 	}
 	else
 	{
-		SetColor(bColor.GetColor().r, bColor.GetColor().g, bColor.GetColor().b);
 		FillRectangle(X, Y, Width, Height);
 		text->OnPaint();
 	}

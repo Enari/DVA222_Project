@@ -17,8 +17,8 @@ public:
   void SetText(string text);
 	string GetText();
   Color GetTextColor();
+  void SetTextColor(Color color);
   void SetTextColor(int red, int green, int blue);
-	void SetTextColor(Color color);
 	void OnPaint();
 
 private:
