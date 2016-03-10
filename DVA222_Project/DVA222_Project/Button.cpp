@@ -20,9 +20,9 @@ Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX
 {
 	hit = pressed = false;
 	backgroundColor = buttonColor;
-	this->text->SetPosition((posX+width/2)-buttonText.length()*AVERAGE_LETTER_WIDTH, posY+(height/2)+5); /*Bredden delat med två - längden på strängen
-																										 gånger avg. bredd på en bokstav för att
-																										 centrera i x led*/
+	text->SetPosition((posX+width/2)-buttonText.length()*AVERAGE_LETTER_WIDTH, posY+(height/2)+5); /*Bredden delat med två - längden på strängen
+																									 gånger avg bredd på en bokstav för att
+																							         centrera i x led*/
 }
 
 Button::Button(string buttonText, int posX, int posY, int width, int height)
@@ -50,17 +50,17 @@ void Button::OnPaint()
 	if (pressed)
 	{
 		SetColor(128, 128, 128);
-		FillRectangle(X, Y, Width, Height);
-		DrawRectangle(X - 1, Y - 1, Width + 2, Height + 2);
+		FillRectangle(X, Y, Width, Height);//Ritar tillfälligt en ny rektangel ovanpå den gamla
+		DrawRectangle(X - 1, Y - 1, Width + 2, Height + 2);//Så att hover border stannar även när man klickar
 	}
-	else if (hit)
+	else if (hit)//Hit == när man hovrar över knappen
 	{
 		FillRectangle(X, Y, Width, Height);
-		DrawRectangle(X - 1, Y - 1, Width + 2, Height + 2);
+		DrawRectangle(X - 1, Y - 1, Width + 2, Height + 2);//Ger button en border när man hovrar
 	}
 	else
 	{
 		FillRectangle(X, Y, Width, Height);
 	}
-  ClickableItems::OnPaint();
+  ClickableItems::OnPaint();//För att rita ut label på knappen
 }
