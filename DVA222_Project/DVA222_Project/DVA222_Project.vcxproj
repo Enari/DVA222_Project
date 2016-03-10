@@ -97,6 +97,7 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="ZControlBase.h" />
+    <ClInclude Include="ZControlBaseCompareZ.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Button.cpp" />

@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #include "ZControlBase.h"
 #include <vector>
 #include "Label.h"
@@ -23,4 +24,5 @@ public:
 protected:
   vector<ZControlBase*> objects;
 };
+
 

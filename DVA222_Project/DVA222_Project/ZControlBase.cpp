@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "ZControlBase.h"
 
-
 ZControlBase::ZControlBase(int x, int y, int w, int h, int z)
 {
   X = x;
@@ -39,6 +38,12 @@ bool ZControlBase::operator<(const ZControlBase & other)
 {
   return Z < other.Z;
 }
+
+bool ZControlBase::operator<(const ZControlBase * other)
+{
+  return Z < (*other).Z;
+}
+
 bool ZControlBase::operator<= (const ZControlBase & other)
 {
   return Z <= other.Z;
