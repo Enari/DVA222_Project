@@ -61,6 +61,8 @@ void Selector::OnPaint()
   {
     normal->OnPaint();
   }
+  text->OnPaint();
+  text->SetPosition(X + 20, Y + 14);//Plus 20 och 14 för att flytta label till bredvid en selector
 }
 
 
