@@ -61,6 +61,7 @@ void Selector::OnPaint()
   {
     normal->OnPaint();
   }
+  text->OnPaint();
 }
 
 
