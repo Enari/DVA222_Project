@@ -35,7 +35,7 @@ int _tmain(int argc, char** argv)
   
   //Create Content
   ZControlBase* topText = new Label("I am a Label. Actually all the text that you see down there are Labels contained in the Panels. My text has a different color", 30, 30, 0, 0, 255);
-  ZControlBase* image = new ImageBox("ButtonNorm.bmp", 30, 400, 100, 100);
+  ZControlBase* image = new ImageBox("DaloGoatBig.bmp", 30, 400);
   ZControlBase* freeRadioButton = new RadioButton("I am a free RadioButton. This Window is my container", 50, 300);
   ZControlBase* freeCheckbox = new Checkbox("I am a free CheckBox.", 50, 330);
 
