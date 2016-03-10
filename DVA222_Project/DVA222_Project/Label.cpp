@@ -68,3 +68,9 @@ void Label::OnPaint()
 	//SetColor(color->getColor().r, color->getColor().g, color->getColor().b);
 	DrawString(text, X, Y);
 }
+
+void Label::SetPosition(int x, int y)
+{
+	this->X = x;
+	this->Y = y;
+}

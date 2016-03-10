@@ -20,6 +20,7 @@ public:
   void SetTextColor(Color color);
   void SetTextColor(int red, int green, int blue);
 	void OnPaint();
+	void SetPosition(int x, int y);
 
 private:
 	string text;
