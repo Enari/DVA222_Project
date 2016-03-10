@@ -9,6 +9,11 @@ Panel::Panel(int x, int y, int w, int h, Color& color, int z)
   backgroundColor = new Color(color);
 }
 
+Panel::Panel(const Panel& other)
+{
+  backgroundColor = new Color(*other.backgroundColor);
+}
+
 
 Panel::~Panel()
 {}
