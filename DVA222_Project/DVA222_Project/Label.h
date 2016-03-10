@@ -18,6 +18,7 @@ public:
 	string GetText();
   Color GetTextColor();
   void SetTextColor(int red, int green, int blue);
+	void SetTextColor(Color color);
 	void OnPaint();
 
 private:

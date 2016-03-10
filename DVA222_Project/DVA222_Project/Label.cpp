@@ -2,9 +2,8 @@
 #include "Label.h"
 #include "Graphix.h"
 
-Label::Label()
+Label::Label() : Label ("")
 {
-	Label("");
 }
 
 Label::Label(const Label & other)
@@ -16,14 +15,12 @@ Label::Label(const Label & other)
 	this->color = new Color(*other.color);
 }
 
-Label::Label(string text)
+Label::Label(string text) : Label(text, 0, 0, 0, 0, 0)
 {
-	Label(text, 0, 0, 0, 0, 0);
 }
 
-Label::Label(string text, int x, int y)
+Label::Label(string text, int x, int y) : Label(text, x, y, 0, 0, 0)
 {
-	Label(text, x, y, 0, 0, 0);
 }
 
 Label::Label(string text, int x, int y, int red, int green, int blue)
@@ -37,7 +34,7 @@ Label::Label(string text, int x, int y, int red, int green, int blue)
 
 Label::~Label()
 {
-
+	delete color;
 }
 
 void Label::SetText(string text)
@@ -50,9 +47,19 @@ string Label::GetText()
 	return text;
 }
 
+Color Label::GetTextColor()
+{
+	return *color;
+}
+
 void Label::SetTextColor(int red, int green, int blue)
 {
 	color->SetColor(red, green, blue);
+}
+
+void Label::SetTextColor(Color color)
+{
+	this->color = new Color(color);
 }
 
 void Label::OnPaint()
