@@ -15,6 +15,7 @@
 #include "Checkbox.h"
 
 #include "Window.h"
+#include "Panel.h"
 
 #include "RadioButtonGroup.h"
 #include "CheckboxGroup.h"
@@ -30,35 +31,35 @@ int _tmain(int argc, char** argv)
   //------------------------------------------------------------------------------------------------------------------------------------
 
   //Skapa MainWindow
- // Panel* mainWindow = new Panel(0, 0, 800, 600, Color(200, 200, 200));
+  Panel* mainWindow = new Panel(0, 0, 800, 600, Color(200, 200, 200));
   
   //Skapa innehålle
-  //ZControlBase* topText = new Label("I am a Label. Actuallt all the text that you see down there are Labels contained in the Panels. My text has a different color", 30, 30, 0, 0, 255);
+  ZControlBase* topText = new Label("I am a Label. Actuallt all the text that you see down there are Labels contained in the Panels. My text has a different color", 30, 30, 0, 0, 255);
   //ZControlBase* freeRadioButton = new RadioButton("I am a Radiobutton", 30, 300); ///Det går att skapas här
+  //ZControlBase* freeRadioButton = new checkbox("i am a checkbox", 30, 330);
 
-  //ZControlBase* image = new ImageBox("ButtonNorm.bmp", 30, 400, 100, 100);
- 
+  ZControlBase* image = new ImageBox("ButtonNorm.bmp", 30, 400, 100, 100);
   ZControlBase *button = new Button("Hello, i am a button", *new Color(255, 0, 0), *new Color(50, 125, 30), 260, 500, 350, 30);
   
-  //Panel* greenPanel = new Panel(400, 300, 370, 200, Color(0, 255, 110));
-  //greenPanel->AddObject(new Label("I am also a Panel. as you can see...", 30, 30, 0, 0, 0));
+  Panel* greenPanel = new Panel(400, 300, 370, 200, Color(0, 255, 110));
+  greenPanel->AddObject(new Label("I am also a Panel. as you can see...", 30, 30, 0, 0, 0));
 
-  //Panel* bluePanel = new Panel(250, 400, 370, 170, Color(0, 200, 255));
-  //bluePanel->AddObject(new Label("I am a Panel. I can contain stuff...", 30, 30, 0, 0, 0));
-
+  Panel* bluePanel = new Panel(250, 400, 370, 170, Color(0, 200, 255));
+  bluePanel->AddObject(new Label("I am a Panel. I can contain stuff...", 30, 30, 0, 0, 0));
+  bluePanel->AddObject(new Button("Hello, i am a button", Color(255, 0, 0), Color(50, 125, 30), 30, 100, 320, 30));
   //Lägg till Object
-/*
-  mainwindow->addobject(toptext);
+  mainWindow->AddObject(topText);
+  /*
   mainwindow->addobject(freeradiobutton);
-  mainwindow->addobject(new checkbox("i am a checkbox", 30, 330)); ///och direct här!
-  mainwindow->addobject(image);
-  mainwindow->addobject(static_cast<zcontrolbase*>(greenpanel));
-  mainwindow->addobject(static_cast<zcontrolbase*>(bluepanel));
+  mainwindow->addobject(); ///och direct här!
+  */
+  mainWindow->AddObject(image);
+  mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
+  mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
   mainWindow->AddObject(button);
-*/
+
   //Typecasta mainvindow och kör InitOGL
-  //InitOGL(argc, argv, static_cast<ControlBase*>(mainWindow));
-  InitOGL(argc, argv, button);
+  InitOGL(argc, argv, static_cast<ControlBase*>(mainWindow));
   
   //Delete stuff mabe??
   
