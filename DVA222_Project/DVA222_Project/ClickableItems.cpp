@@ -29,7 +29,7 @@ ClickableItems::ClickableItems(string text, Color & color, int x, int y)
 ClickableItems::ClickableItems(string text, Color & color, int x, int y, int w, int h)
 	: ZControlBase(x, y, w, h)
 {
-	hit = pressed = false;
+	hit = pressed = mouseButtonDown = false;
 	this->text = new Label(text, color, x, y);
 }
 

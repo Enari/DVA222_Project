@@ -33,5 +33,6 @@ protected:
 	Label *text;
 	bool hit;
 	bool pressed;
+  bool mouseButtonDown;
 };
 
