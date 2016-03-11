@@ -32,7 +32,7 @@ ImageBox::~ImageBox()
 
 void ImageBox::OnPaint()
 {
-	if (Width == 0 && Height == 0)
+	if (Width == 0 && Height == 0)//Om ingen bredd eller höjd har specifierats ritas bilden i orginalstorlek
 		DrawBitmap(*image, X, Y);
 	else
 		DrawBitmap(*image, X, Y, Width, Height);

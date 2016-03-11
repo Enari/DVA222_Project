@@ -42,13 +42,14 @@ Color Button::GetButtonColor(Color & color)
 
 void Button::OnLoaded()
 {
-  /*Bredden delat med två - längden på strängen centrera i x led*/
-  this->text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);   
+  /*Samma uträkning som i OnPaint, verkar funka utan OnLoaded så har denna utkommenterad*/
+  //this->text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);   
 }
 
 void Button::OnPaint()
 {
-  text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);
+	/*Bredden delat med två (minus) uppskattade bredden på strängen för att centrera i x led*/
+	text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);
 	SetColor((backgroundColor.GetColor().r), (backgroundColor.GetColor().g), (backgroundColor.GetColor().b));
 	if (pressed)
 	{
