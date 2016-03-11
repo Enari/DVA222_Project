@@ -1,12 +1,6 @@
 #include "stdafx.h"
 #include "ImageBox.h"
 
-
-ImageBox::ImageBox()
-{
-
-}
-
 ImageBox::ImageBox(const ImageBox &other)
 {
 	this->filepath = other.filepath;
