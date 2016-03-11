@@ -29,6 +29,8 @@ void Container::OnLoaded()
     //Change position to relative
     object->SetX(object->GetX() + X);
     object->SetY(object->GetY() + Y);
+    object->SetPressedPosX();
+    object->SetPressedPosY();
     object->OnLoaded();
   }
 }
@@ -36,6 +38,14 @@ void Container::OnLoaded()
 void Container::OnPaint()
 {
  
+  for each (auto& object in objects)
+  {
+    //Change position to relative
+    object->SetX(object->GetPressedPosX() + (this->X - this->GetPressedPosX()) );
+    object->SetY(object->GetPressedPosY() + (this->Y - this->GetPressedPosY()) );
+    //object->OnLoaded();
+
+  }
   //Sorterar Vektorn i storleksordning
   sort(objects.begin(), objects.end(), ZControlBaseCompareZ());
 
@@ -65,8 +75,12 @@ void Container::OnKeyboard(unsigned char key, int x, int y)
 
 void Container::OnMouseDown(int button, int x, int y)
 {
+  this->SetPressedPosX();
+  this->SetPressedPosY();
   for each (auto& object in objects)
   {
+    object->SetPressedPosX();
+    object->SetPressedPosY();
     object->OnMouseDown(button, x, y);
   }
 }

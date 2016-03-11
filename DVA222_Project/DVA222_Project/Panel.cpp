@@ -34,3 +34,4 @@ void Panel::OnPaint()
   FillRectangle(X, Y, Width, Height);
   Container::OnPaint();
 }
+

@@ -48,6 +48,7 @@ void Button::OnLoaded()
 
 void Button::OnPaint()
 {
+  text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);
 	SetColor((backgroundColor.GetColor().r), (backgroundColor.GetColor().g), (backgroundColor.GetColor().b));
 	if (pressed)
 	{

@@ -36,6 +36,8 @@ void ElementGroup::OnLoaded()
 
 void ElementGroup::OnPaint()
 {
+
+  title->SetPosition(X + 10, Y + 12);
   //Draw the boarder
   SetColor(boarderColor->GetColor().r, boarderColor->GetColor().g, boarderColor->GetColor().b);
   DrawRectangle(X, Y, Width, Height);
@@ -44,7 +46,7 @@ void ElementGroup::OnPaint()
   SetColor(100, 200, 255);
   FillRectangle(X, Y, Width, 15);
 
-  //Dwar headerboarder
+  //Draw headerboarder
   SetColor(0, 0, 0);
   DrawRectangle(X, Y, Width, 15);
 
@@ -58,7 +60,6 @@ void ElementGroup::OnMouseMove(int button, int x, int y)
   for each (auto& object in objects)
   {
     object->OnMouseMove(button, x, y);
-    object->OnLoaded();
   }
   Container::OnMouseMove(button, x, y);
 }
