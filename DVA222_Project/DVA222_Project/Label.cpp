@@ -3,18 +3,15 @@
 
 Label::Label()
   : Label ("")
-{
-}
+{}
 
 Label::Label(string text)
   : Label(text, 0, 0, 0, 0, 0)
-{
-}
+{}
 
 Label::Label(string text, int x, int y)
   : Label(text, Color(0, 0, 0), x, y)
-{
-}
+{}
 
 Label::Label(string text, int x, int y, int red, int green, int blue)
   : Label(text, Color(red, green, blue), x, y)
@@ -22,23 +19,18 @@ Label::Label(string text, int x, int y, int red, int green, int blue)
 
 Label::Label(string text, Color & color)
   :Label(text, color, 0, 0)
-{
-
-}
+{}
 
 Label::Label(string text, Color& color, int x, int y)
+  : ZControlBase(x, y)
 {
   this->text = text;
-  this->X = x;
-  this->Y = y;
   this->color = new Color(color);
 }
 
 Label::Label(const Label & other)
 {
   this->text = other.text;
-  this->X = other.X;
-  this->Y = other.Y;
   this->color = new Color(*other.color);
 }
 
