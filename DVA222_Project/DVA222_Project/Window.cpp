@@ -112,7 +112,8 @@ void Window::OnMouseMove(int button, int x, int y)
     {
       //object->SetX(object->GetPressedPosX() + (x - mousePressedPosX));
       //object->SetY(object->GetPressedPosY() + (y - mousePressedPosY));
-      object->UpdatePosition(x - mousePressedPosX, y - mousePressedPosY);
+      //object->UpdatePosition(x - mousePressedPosX, y - mousePressedPosY);
+      //object->Update(x, y);
     }
   }
   ElementGroup::OnMouseMove(button, x, y);

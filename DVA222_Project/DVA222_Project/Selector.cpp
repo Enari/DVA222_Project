@@ -49,6 +49,13 @@ void Selector::SetStatus(bool newStatus)
 //Done
 void Selector::OnPaint()
 {
+  checked->SetX(X);
+  checked->SetY(Y);
+  hover->SetX(X);
+  hover->SetY(Y);
+  normal->SetX(X);
+  normal->SetY(Y);
+  text->SetPosition(X + 20, Y + 14);//Plus 20 och 14 för att flytta label till bredvid en selector
   if(pressed == true)
   {
     checked->OnPaint();
@@ -62,7 +69,6 @@ void Selector::OnPaint()
     normal->OnPaint();
   }
   text->OnPaint();
-  text->SetPosition(X + 20, Y + 14);//Plus 20 och 14 för att flytta label till bredvid en selector
 }
 
 

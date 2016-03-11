@@ -9,6 +9,8 @@ ZControlBase::ZControlBase(int x, int y, int w, int h, int z)
   //No negative sizes. Make size zero if size is negative.
   w < 0 ? Width = 0 : Width = w;
   h < 0 ? Height = 0 : Height = h;
+  SetPressedPosX();
+  SetPressedPosY();
 }
 
 ZControlBase::ZControlBase(const ZControlBase & other) : ControlBase(other)
@@ -96,7 +98,7 @@ void ZControlBase::SetPressedPosY()
 
 void ZControlBase::UpdatePosition(int deltaX, int deltaY)
 {
-  X = PressedPosX + deltaX;
-  Y = PressedPosY + deltaY;
+  //X = PressedPosX + deltaX;
+  //Y = PressedPosY + deltaY;
 }
 

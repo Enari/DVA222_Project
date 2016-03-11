@@ -39,16 +39,18 @@ int _tmain(int argc, char** argv)
   
   //Create Content
   ZControlBase* topText = new Label("I am a Label. Actually all the text that you see down there are Labels contained in the Panels. My text has a different color", 30, 30, 0, 0, 255);
-  ZControlBase* image = new ImageBox("DaloGoatBig.bmp", 30, 400);
-  ZControlBase* freeRadioButton = new RadioButton("I am a free RadioButton. This Window is my container", 50, 300);
-  ZControlBase* freeCheckbox = new Checkbox("I am a free CheckBox.", 50, 330);
+  ZControlBase* image = new ImageBox("DaloGoatBig.bmp", 30, 100);
+  ZControlBase* freeRadioButton = new RadioButton("I am a free RadioButton. This Window is my container", 50, 150);
+  ZControlBase* freeCheckbox = new Checkbox("I am a free CheckBox.", 50, 130);
+  ZControlBase* freeButton = new Button("I am a button imprissoned in the panel", Color(0, 0, 0), Color(255, 255, 100), 30, 80, 320, 30);
 
   //Create pannels
   Panel* greenPanel = new Panel(400, 300, 370, 200, Color(0, 255, 110));
   greenPanel->AddObject(new Label("I am also a Panel. as you can see...", 30, 30, 0, 0, 0));
   greenPanel->AddObject(new Checkbox("I am a Captured CheckBox.", 30, 50));
 
-  Panel* bluePanel = new Panel(250, 450, 405, 120, Color(0, 200, 255));
+  //Panel* bluePanel = new Panel(250, 450, 405, 120, Color(0, 200, 255));
+  Panel* bluePanel = new Panel(30, 10, 405, 120, Color(0, 200, 255));
   bluePanel->AddObject(new Label("I am a Panel. I can contain stuff inside (like the button below).", 30, 30, 0, 0, 0));
   bluePanel->AddObject(new Label("I can also have different colors.", 30, 48, 0, 0, 0));
   bluePanel->AddObject(new Button("I am a button imprissoned in the panel", Color(0, 0, 0), Color(255, 255, 100), 30, 80, 320, 30));
@@ -78,8 +80,9 @@ int _tmain(int argc, char** argv)
   //mainWindow->AddObject(image);
   //mainWindow->AddObject(freeRadioButton);
   //mainWindow->AddObject(freeCheckbox);
+  //mainWindow->AddObject(freeButton);
   //mainWindow->AddObject(static_cast<ZControlBase*>(greenPanel));
-  //mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
+  mainWindow->AddObject(static_cast<ZControlBase*>(bluePanel));
   //mainWindow->AddObject(static_cast<ZControlBase*>(checkboxGroup));
   mainWindow->AddObject(static_cast<ZControlBase*>(radioButtonGroup));
   //mainWindow->AddObject(win);

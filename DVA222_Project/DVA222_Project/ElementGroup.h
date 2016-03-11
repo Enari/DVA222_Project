@@ -27,6 +27,7 @@ public:
   virtual void OnMouseUp(int button, int x, int y);
   virtual void OnMouseMove(int button, int x, int y);
 
+
 protected:
   Label* title;
   Color* boarderColor;
