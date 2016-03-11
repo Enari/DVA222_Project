@@ -18,7 +18,7 @@ Window::Window(string title, Color & titleColor, Color& borderColor, Color& back
   : ElementGroup(title, titleColor, borderColor, x, y, w, h)
 {
   this->backgroundColor = new Color(backgroundColor);
-  hit = pressed = false;
+  hit = pressed = mouseButtonDown = false;
   mousePressedPosX = mousePressedPosY = 0;
 }
 
@@ -68,14 +68,18 @@ void Window::OnMouseDown(int button, int x, int y)
 {
   if (hit && button == MOUSE_LEFT)
   {
+    mouseButtonDown = true;
     pressed = true;
     mousePressedPosX = x;
     mousePressedPosY = y;
-    PressedPosX = X;
-    PressedPosY = Y;
-    //Saving positioner of all objects contained by the window respectively
+    pressedPosX = X;
+    pressedPosY = Y;
+
+    //Save position of inherited title object
     title->SetPressedPosX();
     title->SetPressedPosY();
+
+    //Saving positioner of all objects contained by the window respectively
     for each (auto& object in objects)
     {
       object->SetPressedPosX();
@@ -88,7 +92,10 @@ void Window::OnMouseDown(int button, int x, int y)
 
 void Window::OnMouseUp(int button, int x, int y)
 {
+  //Mouse release, window is not pressed and mouse button is not down
   pressed = false;
+  mouseButtonDown = false;
+
   ElementGroup::OnMouseUp(button, x, y);
 }
 
@@ -98,22 +105,21 @@ void Window::OnMouseMove(int button, int x, int y)
   {
     hit = true;
   }
-  else
+  else if(mouseButtonDown == false)
   {
     pressed = hit = false;
   }
   if (hit && pressed) {
-    X = PressedPosX + (x - mousePressedPosX);
-    Y = PressedPosY + (y - mousePressedPosY);
-    //Moving all objects in the window
-    title->SetX(title->GetPressedPosX() + (x - mousePressedPosX));
-    title->SetY(title->GetPressedPosY() + (y - mousePressedPosY));
-    for each (auto& object in objects)
+    //Prohibits window from going out at top and left.
+    //On top because it can get stuck. Left because text disappears when its x is < 0.
+    if (pressedPosY + (y - mousePressedPosY) > 0 && 
+      pressedPosX + (x - mousePressedPosX) > 0)
     {
-      //object->SetX(object->GetPressedPosX() + (x - mousePressedPosX));
-      //object->SetY(object->GetPressedPosY() + (y - mousePressedPosY));
-      //object->UpdatePosition(x - mousePressedPosX, y - mousePressedPosY);
-      //object->Update(x, y);
+      X = pressedPosX + (x - mousePressedPosX);
+      Y = pressedPosY + (y - mousePressedPosY);
+      //Moving inherited title object
+      title->SetX(title->GetPressedPosX() + (x - mousePressedPosX));
+      title->SetY(title->GetPressedPosY() + (y - mousePressedPosY));
     }
   }
   ElementGroup::OnMouseMove(button, x, y);

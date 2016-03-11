@@ -21,9 +21,10 @@ public:
 
 private:
   Color* backgroundColor;
-  bool pressed;
-  bool hit;
-  int mousePressedPosX, mousePressedPosY;
-  int PressedPosX, PressedPosY;
+  bool pressed; // Whether object is pressed or not 
+  bool hit; // Whether mouse is over the object or not
+  bool mouseButtonDown; // Used to keep window movement on quick mouse moves
+  int mousePressedPosX, mousePressedPosY; // Position on mouse when pressed to calculate delta mouse
+  int pressedPosX, pressedPosY; // The window position when mouse is pressed
 };
 
