@@ -31,7 +31,7 @@ int _tmain(int argc, char** argv)
   //------------------------------------------------------------------------------------------------------------------------------------
 
   //Skapa MainWindow
-  Window* mainWindow = new Window("I am a dragable window", Color(255, 252, 255), Color(255, 0, 255), Color(0, 252, 255), 50, 50, 700, 500);
+  Window* mainWindow = new Window("I am a dragable window", Color(255, 252, 255), Color(0, 0, 0), Color(230, 230, 230), 50, 50, 700, 500);
 
   //Create Window
   //Window* win = new Window("I am a dragable window", Color(255,252,255), Color(255, 0, 255), Color(0, 252, 255), 100, 300, 600, 300);
