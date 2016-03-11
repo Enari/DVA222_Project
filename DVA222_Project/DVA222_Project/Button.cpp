@@ -65,6 +65,8 @@ void Button::OnPaint()
 	else
 	{
 		FillRectangle(X, Y, Width, Height);
+		SetColor(0, 0, 0);
+		DrawRectangle(X, Y, Width + 1, Height + 1);//Fin svart border på knappen
 	}
   ClickableItems::OnPaint();//För att rita ut label på knappen
 }
