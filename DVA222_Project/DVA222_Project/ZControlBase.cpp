@@ -28,30 +28,6 @@ ZControlBase::ZControlBase(const ZControlBase & other) : ControlBase(other)
 ZControlBase::~ZControlBase()
 {}
 
-bool ZControlBase::operator>(const ZControlBase & other)
-{
-  return Z > other.Z;
-}
-
-bool ZControlBase::operator>=(const ZControlBase & other)
-{
-  return Z >= other.Z;
-}
-
-bool ZControlBase::operator<(const ZControlBase & other)
-{
-  return Z < other.Z;
-}
-
-bool ZControlBase::operator<(const ZControlBase * other)
-{
-  return Z < (*other).Z;
-}
-
-bool ZControlBase::operator<= (const ZControlBase & other)
-{
-  return Z <= other.Z;
-}
 int ZControlBase::GetZ()
 {
   return Z;
