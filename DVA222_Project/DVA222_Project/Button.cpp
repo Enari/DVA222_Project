@@ -55,7 +55,7 @@ void Button::OnPaint()
 	{
 		SetColor(128, 128, 128);
 		FillRectangle(X, Y, Width, Height);//Ritar tillfälligt en ny rektangel ovanpå den gamla
-		DrawRectangle(X - 1, Y - 1, Width + 2, Height + 2);//Så att hover border stannar även när man klickar
+		DrawRectangle(X - 1, Y - 1, Width + 1, Height  + 1);//Så att hover border stannar även när man klickar
 	}
 	else if (hit)//Hit == när man hovrar över knappen
 	{
