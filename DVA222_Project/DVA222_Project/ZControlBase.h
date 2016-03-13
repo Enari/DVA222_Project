@@ -23,6 +23,6 @@ public:
 private:
   //Lower Z values represent objects which are more to the front.
   int Z;
-  int PressedPosX, PressedPosY;
-
+  int PressedPosX; //The x-position when mouse is pressed.
+  int PressedPosY; //The x-position when mouse is pressed.
 };

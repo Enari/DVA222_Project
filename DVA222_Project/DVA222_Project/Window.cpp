@@ -18,7 +18,7 @@ Window::Window(string title, Color & titleColor, Color& borderColor, Color& back
   : ElementGroup(title, titleColor, borderColor, x, y, w, h)
 {
   this->backgroundColor = new Color(backgroundColor);
-  hit = pressed = mouseButtonDown = false;
+  hit = pressed = false;
   mousePressedPosX = mousePressedPosY = 0;
 }
 
@@ -29,7 +29,7 @@ Window::~Window()
 
 Color Window::GetBackgroudColor()
 {
-  return *backgroundColor;
+  return Color(*backgroundColor);
 }
 
 void Window::SetBackgroundColor(Color & newColor)
@@ -68,12 +68,11 @@ void Window::OnMouseDown(int button, int x, int y)
 {
   if (hit && button == MOUSE_LEFT)
   {
-    mouseButtonDown = true;
     pressed = true;
     mousePressedPosX = x;
     mousePressedPosY = y;
-    pressedPosX = X;
-    pressedPosY = Y;
+    SetPressedPosX();
+    SetPressedPosY();
 
     //Save position of inherited title object
     title->SetPressedPosX();
@@ -92,31 +91,32 @@ void Window::OnMouseDown(int button, int x, int y)
 
 void Window::OnMouseUp(int button, int x, int y)
 {
-  //Mouse release, window is not pressed and mouse button is not down
+  //Mouse release, window is not pressed
   pressed = false;
-  mouseButtonDown = false;
 
   ElementGroup::OnMouseUp(button, x, y);
 }
 
 void Window::OnMouseMove(int button, int x, int y)
 {
+  //Hit is true if mouse is on window top bar
   if (x > X && x < X + Width && y > Y && y < Y + 25)
   {
     hit = true;
   }
-  else if(mouseButtonDown == false)
+  else
   {
-    pressed = hit = false;
+    hit = false;
   }
-  if (hit && pressed) {
+
+  if (pressed) {
     //Prohibits window from going out at top and left.
-    //On top because it can get stuck. Left because text disappears when its x is < 0.
-    if (pressedPosY + (y - mousePressedPosY) > 0 && 
-      pressedPosX + (x - mousePressedPosX) > 0)
+    //On top because it can get unreachable. Left because text disappears when its x is < 0.
+    if (GetPressedPosY() + (y - mousePressedPosY) > 0 && 
+      GetPressedPosX() + (x - mousePressedPosX) > 0)
     {
-      X = pressedPosX + (x - mousePressedPosX);
-      Y = pressedPosY + (y - mousePressedPosY);
+      X = GetPressedPosX() + (x - mousePressedPosX);
+      Y = GetPressedPosY() + (y - mousePressedPosY);
       //Moving inherited title object
       title->SetX(title->GetPressedPosX() + (x - mousePressedPosX));
       title->SetY(title->GetPressedPosY() + (y - mousePressedPosY));
