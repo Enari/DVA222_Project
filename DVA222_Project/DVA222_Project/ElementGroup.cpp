@@ -28,6 +28,26 @@ ElementGroup::~ElementGroup()
   delete boarderColor;
 }
 
+void ElementGroup::SetTitle(string title)
+{
+	this->title->SetText(title);
+}
+
+string ElementGroup::GetTitle()
+{
+	return title->GetText();
+}
+
+void ElementGroup::SetBoarderColor(Color & color)
+{
+	boarderColor->SetColor();
+}
+
+Color ElementGroup::GetBoarderColor()
+{
+	//return boarderColor->GetColor();
+}
+
 void ElementGroup::OnLoaded()
 {
   title->SetPosition(X + 10, Y + 12);
