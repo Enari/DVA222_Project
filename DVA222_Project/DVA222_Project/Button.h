@@ -12,7 +12,7 @@ class Button :
   public ClickableItems
 {
 private:
-  Color backgroundColor;
+  Color* backgroundColor;
   int buttonTextLength;
 public:
   Button();
@@ -22,7 +22,7 @@ public:
   ~Button();
 
   void SetButtonColor(Color &color); //d
-  Color GetButtonColor(Color &color); //d
+  Color GetButtonColor(); //d
 
   void OnLoaded();
   void OnPaint(); //d

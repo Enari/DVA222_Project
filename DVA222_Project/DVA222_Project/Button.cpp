@@ -15,7 +15,7 @@ Button::Button(string buttonText, int posX, int posY, int width, int height)
 Button::Button(string buttonText, Color& textColor, Color& buttonColor, int posX, int posY, int width, int height)
 	: ClickableItems(buttonText, textColor, posX, posY, width, height)
 {
-	backgroundColor = buttonColor;
+	backgroundColor = new Color(buttonColor);
     buttonTextLength = buttonText.length();
 }
 
@@ -32,12 +32,12 @@ Button::~Button()
 
 void Button::SetButtonColor(Color & color)
 {
-	backgroundColor = color;
+	backgroundColor = &color;
 }
 
-Color Button::GetButtonColor(Color & color)
+Color Button::GetButtonColor()
 {
-	return backgroundColor;
+	return *backgroundColor;
 }
 
 void Button::OnLoaded()
@@ -50,7 +50,7 @@ void Button::OnPaint()
 {
 	/*Bredden delat med två (minus) uppskattade bredden på strängen för att centrera i x led*/
 	text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);
-	SetColor((backgroundColor.GetColor().r), (backgroundColor.GetColor().g), (backgroundColor.GetColor().b));
+	SetColor((backgroundColor->GetColor().r), (backgroundColor->GetColor().g), (backgroundColor->GetColor().b));
 	if (pressed)
 	{
 		SetColor(128, 128, 128);
