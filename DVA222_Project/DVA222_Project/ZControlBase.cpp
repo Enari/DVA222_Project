@@ -71,10 +71,3 @@ void ZControlBase::SetPressedPosY()
 {
   PressedPosY = Y;
 }
-
-void ZControlBase::UpdatePosition(int deltaX, int deltaY)
-{
-  //X = PressedPosX + deltaX;
-  //Y = PressedPosY + deltaY;
-}
-

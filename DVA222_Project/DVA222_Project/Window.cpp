@@ -34,7 +34,8 @@ Color Window::GetBackgroudColor()
 
 void Window::SetBackgroundColor(Color & newColor)
 {
-  backgroundColor = &newColor;
+  delete backgroundColor;
+  backgroundColor = new Color(newColor);
 }
 
 void Window::OnPaint()

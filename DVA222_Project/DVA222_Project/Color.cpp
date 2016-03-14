@@ -33,6 +33,13 @@ void Color::SetColor(int r, int g, int b)
 	this->b = b;
 }
 
+void Color::SetColor(Color & color)
+{
+  r = color.r;
+  g = color.g;
+  b = color.b;
+}
+
 Color::Values Color::GetColor()
 {
 	Values v;

@@ -14,5 +14,6 @@ public:
 	Color(const Color& other);
 	~Color();
 	void SetColor(int r, int g, int b);
+  void SetColor(Color &color);
 	Values GetColor();
 };

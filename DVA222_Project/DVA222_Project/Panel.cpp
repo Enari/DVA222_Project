@@ -20,12 +20,13 @@ Panel::~Panel()
 
 Color Panel::GetBackgroudColor()
 {
-  return *backgroundColor;
+  return Color(*backgroundColor);
 }
 
 void Panel::SetBackgroundColor(Color& newColor)
 {
-  backgroundColor = &newColor;
+  delete backgroundColor;
+  backgroundColor = new Color(newColor);
 }
 
 void Panel::OnPaint()
@@ -33,5 +34,34 @@ void Panel::OnPaint()
   SetColor(backgroundColor->GetColor().r, backgroundColor->GetColor().g, backgroundColor->GetColor().b);
   FillRectangle(X, Y, Width, Height);
   Container::OnPaint();
+}
+
+
+void Panel::OnMouseDown(int button, int x, int y)
+{
+
+  for each (auto& object in objects)
+  {
+    object->OnMouseDown(button, x, y);
+  }
+  Container::OnMouseDown(button, x, y);
+}
+
+void Panel::OnMouseUp(int button, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnMouseUp(button, x, y);
+  }
+  Container::OnMouseUp(button, x, y);
+}
+
+void Panel::OnMouseMove(int button, int x, int y)
+{
+  for each (auto& object in objects)
+  {
+    object->OnMouseMove(button, x, y);
+  }
+  Container::OnMouseMove(button, x, y);
 }
 
