@@ -19,7 +19,10 @@ ElementGroup::ElementGroup(string title, Color & titleColor, Color boarderColor,
 }
 
 ElementGroup::ElementGroup(const ElementGroup & other)
-{}
+{
+	this->title = other.title;
+	this->boarderColor = other.boarderColor;
+}
 
 
 ElementGroup::~ElementGroup()
@@ -30,6 +33,26 @@ ElementGroup::~ElementGroup()
   {
     delete object;
   }
+}
+
+void ElementGroup::SetTitle(string title)
+{
+	this->title->SetText(title);
+}
+
+string ElementGroup::GetTitle()
+{
+	return title->GetText();
+}
+
+void ElementGroup::SetBoarderColor(Color & color)
+{
+	boarderColor->SetColor(color);
+}
+
+Color ElementGroup::GetBoarderColor()
+{
+	return Color(*boarderColor);
 }
 
 void ElementGroup::OnLoaded()

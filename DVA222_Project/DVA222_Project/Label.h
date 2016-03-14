@@ -18,6 +18,8 @@ public:
   Label(const Label& other);
   ~Label();
   
+	void operator= (const Label& other);
+
   //Set&get's
   void SetText(string text);
 	string GetText();
