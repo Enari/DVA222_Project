@@ -26,6 +26,10 @@ ElementGroup::~ElementGroup()
 {
   delete title;
   delete boarderColor;
+  for each (auto& object in objects)
+  {
+    delete object;
+  }
 }
 
 void ElementGroup::OnLoaded()
