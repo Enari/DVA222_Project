@@ -19,7 +19,12 @@ Container::Container(const Container & other)
 }
 
 Container::~Container()
-{}
+{
+  for each (auto& object in objects)
+  {
+    delete object;
+  }
+}
 
 void Container::OnLoaded()
 {

@@ -29,20 +29,16 @@ Window::~Window()
 
 Color Window::GetBackgroudColor()
 {
-  return Color(*backgroundColor);
+  return *backgroundColor;
 }
 
 void Window::SetBackgroundColor(Color & newColor)
 {
-  delete backgroundColor;
-  backgroundColor = new Color(newColor);
+  backgroundColor = &newColor;
 }
 
 void Window::OnPaint()
 {
-
-  //Overriding ElementGroup::OnPaint()
-
   //Draw the background
   SetColor(backgroundColor->GetColor().r, backgroundColor->GetColor().g, backgroundColor->GetColor().b);
   FillRectangle(X, Y, Width, Height);

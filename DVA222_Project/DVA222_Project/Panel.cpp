@@ -16,7 +16,9 @@ Panel::Panel(const Panel& other)
 
 
 Panel::~Panel()
-{}
+{
+  delete backgroundColor;
+}
 
 Color Panel::GetBackgroudColor()
 {
