@@ -26,13 +26,6 @@ Color::Color(const Color & other)
 Color::~Color()
 {}
 
-void Color::SetColor(int r, int g, int b)
-{
-	this->r = r;
-	this->g = g;
-	this->b = b;
-}
-
 void Color::SetColor(Color & color)
 {
   r = color.r;

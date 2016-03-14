@@ -21,10 +21,9 @@ public:
   Button(const Button& other);
   ~Button();
 
-  void SetButtonColor(Color &color); //d
-  Color GetButtonColor(); //d
+  void SetButtonColor(Color &color); 
+  Color GetButtonColor(); 
 
-  void OnLoaded();
-  void OnPaint(); //d
+  void OnPaint();
 };
 

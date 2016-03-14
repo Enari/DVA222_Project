@@ -28,6 +28,7 @@ Button::Button(const Button & other)
 
 Button::~Button()
 {
+  delete backgroundColor;
 }
 
 void Button::SetButtonColor(Color & color)
@@ -40,17 +41,12 @@ Color Button::GetButtonColor()
 	return *backgroundColor;
 }
 
-void Button::OnLoaded()
-{
-  /*Samma uträkning som i OnPaint, verkar funka utan OnLoaded så har denna utkommenterad*/
-  //this->text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);   
-}
 
 void Button::OnPaint()
 {
 	/*Bredden delat med två (minus) uppskattade bredden på strängen för att centrera i x led*/
 	text->SetPosition((X + Width / 2) - buttonTextLength*AVERAGE_LETTER_WIDTH, Y + (Height / 2) + 5);
-	SetColor((backgroundColor->GetColor().r), (backgroundColor->GetColor().g), (backgroundColor->GetColor().b));
+	SetColor(backgroundColor->GetColor().r, backgroundColor->GetColor().g, backgroundColor->GetColor().b);
 	if (pressed)
 	{
 		SetColor(128, 128, 128);
