@@ -19,13 +19,20 @@ ElementGroup::ElementGroup(string title, Color & titleColor, Color boarderColor,
 }
 
 ElementGroup::ElementGroup(const ElementGroup & other)
-{}
+{
+	this->title = other.title;
+	this->boarderColor = other.boarderColor;
+}
 
 
 ElementGroup::~ElementGroup()
 {
   delete title;
   delete boarderColor;
+  for each (auto& object in objects)
+  {
+    delete object;
+  }
 }
 
 void ElementGroup::SetTitle(string title)
