@@ -17,9 +17,10 @@ RadioButton::RadioButton(string text, Color & textColor, int x, int y)
   : Selector(text, textColor, x, y)
 {}
 
-//What to do in this???
 RadioButton::RadioButton(const RadioButton & other)
-{}
+{
+
+}
 
 RadioButton::~RadioButton()
 {

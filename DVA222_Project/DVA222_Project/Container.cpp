@@ -11,7 +11,6 @@ Container::Container()
 Container::Container(int x, int y, int w, int h, int z)
   : ZControlBase(x, y, w, h, z)
 {
-
 }
 
 Container::Container(const Container & other)
@@ -43,11 +42,9 @@ void Container::OnPaint()
     //Change position to relative
     object->SetX(object->GetPressedPosX() + (this->X - this->GetPressedPosX()) );
     object->SetY(object->GetPressedPosY() + (this->Y - this->GetPressedPosY()) );
-    //object->OnLoaded();
-
   }
   //Sorterar Vektorn i storleksordning
-  sort(objects.begin(), objects.end(), ZControlBaseCompareZ());
+  stable_sort(objects.begin(), objects.end(), ZControlBaseCompareZ());
 
   //Call All objects OnPaint
   for each (auto& object in objects)

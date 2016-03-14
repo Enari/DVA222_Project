@@ -17,7 +17,6 @@ Checkbox::Checkbox(string text, Color & textColor, int x, int y)
   : Selector(text, textColor, x, y)
 {}
 
-//What to do in this???
 Checkbox::Checkbox(const Checkbox & other)
 {}
 
