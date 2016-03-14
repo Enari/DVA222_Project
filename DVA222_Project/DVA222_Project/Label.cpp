@@ -65,12 +65,7 @@ Color Label::GetTextColor()
 
 void Label::SetTextColor(Color& color)
 {
-  this->color = new Color(color);
-}
-
-void Label::SetTextColor(int red, int green, int blue)
-{
-	color->SetColor(red, green, blue);
+  this->color = &color;
 }
 
 void Label::SetPosition(int x, int y)
