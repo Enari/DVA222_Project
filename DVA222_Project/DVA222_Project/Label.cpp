@@ -39,6 +39,15 @@ Label::~Label()
 	delete color;
 }
 
+void Label::operator=(const Label & other)
+{
+	this->X = other.X;
+	this->Y = other.Y;
+	this->color = other.color;
+	this->text = other.text;
+	
+}
+
 void Label::SetText(string text)
 {
 	this->text = text;
