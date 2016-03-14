@@ -18,8 +18,6 @@ public:
   void SetY(int y);
   void SetPressedPosX();
   void SetPressedPosY();
-  void UpdatePosition(int deltaX, int deltaY);
-  virtual void Update(int x, int y) {};
 private:
   //Lower Z values represent objects which are more to the front.
   int Z;
