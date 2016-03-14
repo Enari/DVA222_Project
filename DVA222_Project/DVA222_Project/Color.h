@@ -13,7 +13,6 @@ public:
 	Color();
 	Color(const Color& other);
 	~Color();
-	void SetColor(int r, int g, int b);
   void SetColor(Color &color);
 	Values GetColor();
 	void operator= (const Color& color);
