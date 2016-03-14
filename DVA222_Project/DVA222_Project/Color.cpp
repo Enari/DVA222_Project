@@ -9,13 +9,6 @@ Color::Color()
   b = 255;
 }
 
-void Color::operator=(Color & other)
-{
-	this->r = other.r;
-	this->g = other.g;
-	this->b = other.b;
-}
-
 Color::Color(int red, int green, int blue)
 {
 	r = red;

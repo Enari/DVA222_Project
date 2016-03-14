@@ -8,7 +8,6 @@ private:
 	struct Values {
 		int r, g, b;
 	};
-	void operator= (Color& other);
 public:
 	Color(int r, int g, int b);
 	Color();
