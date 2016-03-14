@@ -20,13 +20,12 @@ Panel::~Panel()
 
 Color Panel::GetBackgroudColor()
 {
-  return Color(*backgroundColor);
+  return *backgroundColor;
 }
 
 void Panel::SetBackgroundColor(Color& newColor)
 {
-  delete backgroundColor;
-  backgroundColor = new Color(newColor);
+  backgroundColor = &newColor;
 }
 
 void Panel::OnPaint()
