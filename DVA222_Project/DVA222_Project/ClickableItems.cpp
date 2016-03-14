@@ -34,7 +34,7 @@ ClickableItems::ClickableItems(string text, Color & color, int x, int y, int w, 
 }
 
 
-ClickableItems::ClickableItems(ClickableItems & other)
+ClickableItems::ClickableItems(const ClickableItems & other)
 {
 	this->text = other.text;
 	this->hit = other.hit;
@@ -61,7 +61,7 @@ string ClickableItems::GetText()
 //Done
 void ClickableItems::SetTextColor(Color& newColor)
 {
-  this->text->SetTextColor(newColor.GetColor().r, newColor.GetColor().g, newColor.GetColor().b);
+  this->text->SetTextColor(newColor);
 }
 
 Color ClickableItems::GetTextColor()

@@ -14,7 +14,7 @@ public:
   ClickableItems(string text, int x, int y);
   ClickableItems(string text, Color& color, int x, int y);
   ClickableItems(string text, Color& color, int x, int y, int w, int h);
-  ClickableItems(ClickableItems& other);
+  ClickableItems(const ClickableItems& other);
   ~ClickableItems();
 
   void SetText(string text);
