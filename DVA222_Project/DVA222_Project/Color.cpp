@@ -48,3 +48,10 @@ Color::Values Color::GetColor()
 	v.b = b;
 	return v;
 }
+
+void Color::operator=(const Color & color)
+{
+	this->r = color.r;
+	this->g = color.g;
+	this->b = color.b;
+}
