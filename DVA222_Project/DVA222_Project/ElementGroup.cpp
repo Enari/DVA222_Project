@@ -19,7 +19,10 @@ ElementGroup::ElementGroup(string title, Color & titleColor, Color boarderColor,
 }
 
 ElementGroup::ElementGroup(const ElementGroup & other)
-{}
+{
+	this->title = other.title;
+	this->boarderColor = other.boarderColor;
+}
 
 
 ElementGroup::~ElementGroup()
