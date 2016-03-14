@@ -1,10 +1,6 @@
 #include "stdafx.h"
 #include "Selector.h"
 
-//temp
-#include <iostream>
-
-//Construktorerna kan inte kalla på varandra........!!!!!
 Selector::Selector()
   : Selector("")
 {}
@@ -22,31 +18,20 @@ Selector::Selector(string text, Color& color, int x, int y)
   : ClickableItems(text, color, x, y)
 {}
 
-Selector::Selector(Selector & other)
-{
-  normal = other.normal;
-  hover = other.hover;
-  checked = other.checked;
-}
-
-//Done
 Selector::~Selector()
 {
 }
 
-//Done
 bool Selector::GetStatus()
 {
   return pressed;
 }
 
-//Done
 void Selector::SetStatus(bool newStatus)
 {
   pressed = newStatus;
 }
 
-//Done
 void Selector::OnPaint()
 {
   checked->SetX(X);
@@ -95,9 +80,9 @@ void Selector::OnMouseMove(int button, int x, int y)
     }
 }
 
+/*Måste overloada OnMouseUp, annars sätter Clickable items pressed == false varje gång
+man trycker på en radiobutton.*/
 void Selector::OnMouseUp(int button, int x, int y)
 {
   mouseButtonDown = false;
-	/*Måste overloada OnMouseUp, annars sätter Clickable items pressed == false varje gång
-	man trycker på en radiobutton.*/
 }

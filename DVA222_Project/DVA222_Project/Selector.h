@@ -21,6 +21,7 @@ public:
   bool GetStatus();
   void SetStatus(bool newStatus);
   
+  virtual void OnLoaded() = 0;
   virtual void OnPaint();
   void OnMouseDown(int button, int x, int y);
   void OnMouseUp(int button, int x, int y);
