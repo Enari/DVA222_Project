@@ -40,12 +40,12 @@ string ElementGroup::GetTitle()
 
 void ElementGroup::SetBoarderColor(Color & color)
 {
-	boarderColor->SetColor();
+	boarderColor->SetColor(color);
 }
 
 Color ElementGroup::GetBoarderColor()
 {
-	//return boarderColor->GetColor();
+	return Color(*boarderColor);
 }
 
 void ElementGroup::OnLoaded()
