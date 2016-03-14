@@ -4,7 +4,6 @@
 ImageBox::ImageBox(const ImageBox &other)
 {
 	this->filepath = other.filepath;
-	this->image = other.image;
 }
 
 ImageBox::ImageBox(string filePath, int posX, int posY)

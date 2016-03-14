@@ -80,7 +80,6 @@ int _tmain(int argc, char** argv)
   mainWindow->AddObject(static_cast<ZControlBase*>(checkboxGroup));
   mainWindow->AddObject(static_cast<ZControlBase*>(radioButtonGroup));
 
-
   //Typecasta mainwindow och kör InitOGL
   InitOGL(argc, argv, static_cast<ControlBase*>(mainWindow));
 

@@ -13,7 +13,7 @@ ZControlBase::ZControlBase(int x, int y, int w, int h, int z)
   SetPressedPosY();
 }
 
-ZControlBase::ZControlBase(const ZControlBase & other) : ControlBase(other)
+ZControlBase::ZControlBase(const ZControlBase & other)
 {
   X = other.X;
   Y = other.Y;
