@@ -11,9 +11,21 @@ Color::Color()
 
 Color::Color(int red, int green, int blue)
 {
-	r = red;
-	g = green;
-	b = blue;
+  //If all values are valid, use them. Otherwise use white.
+  if (red >= 0 && red <= 255 &&
+    green >= 0 && green <= 255 &&
+    blue >= 0 && blue <= 255)
+  {
+    r = red;
+    g = green;
+    b = blue;
+  }
+  else 
+  {
+    r = 255;
+    g = 255;
+    b = 255;
+  }
 }
 
 Color::Color(const Color & other)

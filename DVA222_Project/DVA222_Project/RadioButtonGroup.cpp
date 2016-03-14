@@ -1,25 +1,6 @@
 #include "stdafx.h"
 #include "RadioButtonGroup.h"
 
-//Kommenterat ut för det buggade sönder programmet, inte färdigimplementerat..
-
-
-//
-//RadioButtonGroup::RadioButtonGroup(int x, int y, int w, int h, Label label)
-//: SelectorGroup(x, y, w, h, label)
-//{}
-//
-//
-//RadioButtonGroup::~RadioButtonGroup()
-//{}
-//
-//void RadioButtonGroup::OnPaint()
-//{
-//  //Loop trough all of it's objects and check for wich radiobutton is pressed
-//  //Check  if that's any different from whats currently checks
-//  
-//  //Call selectorcroup::OnPrint()
-//}
 
 RadioButtonGroup::RadioButtonGroup(string title, int x, int y, int w)
   : SelectorGroup(title, x, y, w)
@@ -33,9 +14,12 @@ RadioButtonGroup::RadioButtonGroup(string title, Color & titleColor, Color board
   theCheckeckedRadioButton = NULL;
 }
 
+RadioButtonGroup::~RadioButtonGroup()
+{
+}
+
 void RadioButtonGroup::OnLoaded()
 {
-  OnMouseUp(0, 0, 0);
   SelectorGroup::OnLoaded();
 }
 
